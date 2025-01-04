@@ -32,8 +32,8 @@ export const DATA = {
   ],
   contactButtonsFirstRow: [
     {
-      type: "CV",
-      href: "/Melih SARAÇ - CV.pdf",
+      type: "www.melihsarac.com",
+      href: "www.melihsarac.com",
       icon: <Icons.cv className="size-3" />,
     },
     {
@@ -112,8 +112,8 @@ export const DATA = {
       location: "On-Site",
       title: "Intern",
       logoUrl: "/turkticaretnet-logo.jpeg",
-      start: "January 2021",
-      end: "April 2021",
+      start: "October 2022",
+      end: "January 2023",
       description:
         "I improved myself further with ***HTML, CSS, JavaScript and JQeury***. I also handled the backend with ***PHP, SQL***. Additionally I learned fundamentals of ***Nodejs*** and frameworks like ***Laravel*** and ***Django***. I got familiar with content management systems and ***MVC structure***.",
     },
@@ -124,8 +124,8 @@ export const DATA = {
       location: "On-Site",
       title: "Intern",
       logoUrl: "/turkticaretnet-logo.jpeg",
-      start: "January 2020",
-      end: "April 2020",
+      start: "June 2022",
+      end: "August 2022",
       description:
         "I learned the technologies that make websites work, like ***HTML, CSS, JavaScript***. I learned and deployed a webiste using ***JQuery*** and ***PHP*** with ***MySQL database***",
     },
@@ -158,12 +158,12 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Boostarea",
+      title: "Boostarea.net",
       href: "https://boostarea.net",
       dates: "Nov 2024 - Current",
       active: true,
       description:
-        "Boostarea is a service that provides boost services for online games. I took part in the development of the website.",
+        "Boostarea.net is a service that provides boost services for online games. I took part in the development of the website.",
       technologies: [
         "PHP",
         "JQuery",
