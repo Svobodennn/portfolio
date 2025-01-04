@@ -12,7 +12,7 @@ export const DATA = {
   summaryFirst:
     "I am an experienced backend developer with solid expertise in ***PHP and Laravel***, along with hands-on experience in ***database management***, ***RESTful API development***, and ***payment systems integration***. I have worked on various projects utilizing technologies like ***PHP***, ***Laravel***, ***NodeJS***. Additionally, I emphasize the use of ***SOLID principles*** and best practices to deliver high-quality, scalable, and secure solutions.",
   summarySecond: "In addition to my technical skills, I am passionate about art, dance, sports, music, photography, and motorcycles, all of which fuel my creativity and enhance my problem-solving abilities. I am currently focused on developing ***REST APIs*** using ***Laravel*** and am dedicated to teamwork, ensuring the successful completion of every project.",
-    avatarUrl: "/me.png",
+    avatarUrl: "/me3.png",
   skills: [
     "PHP",
     "Laravel",
