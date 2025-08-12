@@ -190,11 +190,11 @@ export const DATA = {
   hackathons: [
     
     {
-      title: " Language (English) - YDS",
-      dates: "2022",
-      location: "YDS",
+      title: "IELTS Academic",
+      dates: "2025",
+      location: "British Council",
       description:
-        "B2 | 80/100",
+        "C1 | 7.5",
       image:
         "",
       mlh: "",
