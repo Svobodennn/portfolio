@@ -160,7 +160,7 @@ export const DATA = {
     {
       title: "Boostarea.net",
       href: "https://boostarea.net",
-      dates: "Nov 2024 - Current",
+      dates: "Nov 2024 - May 2025",
       active: true,
       description:
         "Boostarea.net is a service that provides boost services for online games. I took part in the development of the website.",
