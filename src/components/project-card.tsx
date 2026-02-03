@@ -63,13 +63,14 @@ export function ProjectCard({
           />
         )} */}
         {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className={cn("h-40 w-full overflow-hidden object-contain object-top ", bgColor)}
-          />
+          <div className={cn("h-40 w-full flex items-center justify-center overflow-hidden relative", bgColor)}>
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-contain" // Flex container handles centering
+            />
+          </div>
         )}
       </Link>
       <CardHeader className="px-2">
@@ -104,7 +105,7 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] items-center text-center">
                   {link.icon}
                   {link.type}
                 </Badge>

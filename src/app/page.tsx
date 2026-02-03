@@ -39,7 +39,7 @@ export default function Page() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Badge className="flex gap-2 px-2 py-1 text-[10px]">
+                        <Badge className="flex gap-2 px-2 py-1 text-[10px] items-center justify-center">
                           {link.icon}
                           {link.type}
                         </Badge>
@@ -54,7 +54,7 @@ export default function Page() {
                   <div className="flex flex-row flex-wrap items-start gap-1">
                     {DATA.contactButtonsSecondRow?.map((link, idx) => (
                       <Link href={link?.href} key={idx} target="_blank">
-                        <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                        <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] items-center justify-center">
                           {link.icon}
                           {link.type}
                         </Badge>
