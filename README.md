@@ -1,47 +1,59 @@
 <div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
+  <h1 align="center">Melih SARAÇ</h1>
+  <h3 align="center">Backend Developer</h3>
 </div>
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+<p align="center">
+  <a href="https://melihsarac.com">Website</a> •
+  <a href="https://linkedin.com/in/melihsarac">LinkedIn</a> •
+  <a href="mailto:melih.sarac@hotmail.com">Email</a>
+</p>
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+## About Me
 
-# Features
+I am an experienced backend developer with solid expertise in **PHP and Laravel**, along with hands-on experience in **database management**, **RESTful API development**, and **payment systems integration**.
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+I have worked on various projects utilizing technologies like **ProstgreSQL**, **MySQL**, **Redis**, and **Docker**. Additionally, I emphasize the use of **SOLID principles** and best practices to deliver high-quality, scalable, and secure solutions.
 
-# Getting Started Locally
+I am passionate about building efficient backend architectures and ensuring the seamless operation of high-traffic applications.
 
-1. Clone this repository to your local machine:
+## 🛠 Tech Stack
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+**Languages & Frameworks:**
+- PHP, Laravel
+- JavaScript, Node.js, Express
+- Vue.js, React.js, jQuery
 
-2. Move to the cloned directory
+**Databases & Caching:**
+- MySQL, PostgreSQL
+- Redis
 
-   ```bash
-   cd portfolio
-   ```
+**Infrastructure & Tools:**
+- Docker
+- Git, DevOps
+- Websockets, Webhooks
+- SEO, Debugging Tools
 
-3. Install dependencies:
+## 🚀 Projects
 
-   ```bash
-   pnpm install
-   ```
+### [Arabamsende.com](https://arabamsende.com)
+A vehicle auction and valuation platform. I contributed to the full lifecycle development of the system, from initial architecture to production.
+- **Stack:** Laravel, VueJS, Tailwind CSS, PostgreSQL, Redis, Docker, Websockets, Laravel Octane.
 
-4. Start the local Server:
+### [Boostarea.net](https://boostarea.net)
+A service that provides services for online games. I took part in the development of the website.
+- **Stack:** PHP, Zend Framework, MySQL, jQuery, Bootstrap 5.
 
-   ```bash
-   pnpm dev
-   ```
+## 💼 Work Experience
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+**Turkticaret.Net** - *Backend Developer* (Jan 2024 - Dec 2025)
+- Developed scalable backend architectures using PHP and Laravel.
+- Optimized database performance with complex query refactoring and Redis caching.
+- Secured payment gateway integrations and automated workflows.
+- Integrated LLM-based AI assistants for customer support.
 
-# License
+## 📫 Contact
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+- **Website:** [melihsarac.com](https://melihsarac.com)
+- **Email:** [melih.sarac@hotmail.com](mailto:melih.sarac@hotmail.com)
+- **LinkedIn:** [linkedin.com/in/melihsarac](https://www.linkedin.com/in/melihsarac/)

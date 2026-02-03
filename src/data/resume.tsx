@@ -201,7 +201,7 @@ export const DATA = {
       dates: "Nov 2024 - May 2025",
       active: true,
       description:
-        "Boostarea.net is a service that provides boost services for online games. I took part in the development of the website.",
+        "Boostarea.net is a service that provides services for online games. I took part in the development of the website.",
       technologies: [
         "PHP",
         "JQuery",
