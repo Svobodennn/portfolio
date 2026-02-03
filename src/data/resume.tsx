@@ -10,22 +10,27 @@ export const DATA = {
   description:
     "Backend Developer",
   summaryFirst:
-    "I am an experienced backend developer with solid expertise in ***PHP and Laravel***, along with hands-on experience in ***database management***, ***RESTful API development***, and ***payment systems integration***. I have worked on various projects utilizing technologies like ***PHP***, ***Laravel***, ***NodeJS***. Additionally, I emphasize the use of ***SOLID principles*** and best practices to deliver high-quality, scalable, and secure solutions.",
-  summarySecond: "In addition to my technical skills, I am passionate about art, dance, sports, music, photography, and motorcycles, all of which fuel my creativity and enhance my problem-solving abilities. I am currently focused on developing ***REST APIs*** using ***Laravel*** and am dedicated to teamwork, ensuring the successful completion of every project.",
-    avatarUrl: "/me3.png",
+    "I am an experienced backend developer with solid expertise in ***PHP and Laravel***, along with hands-on experience in ***database management***, ***RESTful API development***, and ***payment systems integration***. I have worked on various projects utilizing technologies like ***PHP***, ***Laravel***, ***NodeJS***. Additionally, I emphasize the use of ***SOLID principles*** and best practices to deliver high-quality, scalable, and secure solutions. I am dedicated to ***teamwork***, ensuring the successful completion of every project.",
+  summarySecond: "In addition to my technical skills, I am passionate about art, dance, sports, music, photography, and motorcycles, all of which fuel my creativity and enhance my problem-solving abilities.",
+  avatarUrl: "/me3.png",
   skills: [
     "PHP",
+    "NodeJS",
     "Laravel",
-    "RESTful APIs and Webhooks",
+    "Express",
+    "RESTful API",
+    "Websockets",
+    "Webhooks",
     "PostgreSQL",
     "MySQL",
-    "Redis",
-    "Docker",
-    "Node.js",
+    "VueJS",
+    "ReactJS",
     "JQuery",
     "LLM & AI Assistants",
     "SEO",
     "Debugging Tools",
+    "Docker",
+    "Redis",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -101,9 +106,9 @@ export const DATA = {
       title: "Backend Developer",
       logoUrl: "/turkticaretnet-logo.jpeg",
       start: "Jan 2024",
-      end: "Current",
+      end: "Dec 2025",
       description:
-        "I spearheaded operational efficiency by automating daily tasks, then boosted ***website traffic*** through ***SEO and speed optimization***. I implemented robust ***security measures***, particularly in ***payment processing***, and optimized ***server performance*** by ***query improvements***. Played a key role in implementing an ***AI Assistant*** to system to enhance customer experience",
+        "Turkticaret.Net is a leading ***domain and hosting provider*** in Turkey, offering comprehensive digital services including ***domain registration***, ***hosting solutions***, and ***security certificates***.\n\nI developed scalable backend architectures using ***PHP*** and ***SOLID principles*** to support high-traffic operations. I optimized ***MySQL database*** performance by refactoring complex queries and implementing ***Redis caching***. I secured ***payment gateway*** integrations and automated repetitive workflows using ***cron jobs*** and ***queue workers***. Additionally, I integrated ***LLM-based AI assistants*** to improve customer support efficiency.",
     },
     {
       company: "Turkticaret.Net",
@@ -158,6 +163,39 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Arabamsende.com",
+      href: "https://arabamsende.com",
+      dates: "September 2025 - February 2026",
+      active: true,
+      description:
+        "ArabamSende.com is a vehicle auction and valuation platform. I contributed to the full lifecycle development of the system, from initial architecture to production.",
+      technologies: [
+        "Laravel",
+        "VueJS",
+        "Tailwind CSS",
+        "Websocket",
+        "PostgreSQL",
+        "SEO",
+        "Payment System",
+        "Laravel Echo",
+        "Laravel Octane",
+        "Caddy & FrankenPHP",
+        "Docker",
+        "Redis",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://arabamsende.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/arabamsende_logo.png",
+      video:
+        "",
+      bgColor: "bg-[#FFCE37]",
+    },
+    {
       title: "Boostarea.net",
       href: "https://boostarea.net",
       dates: "Nov 2024 - May 2025",
@@ -178,17 +216,18 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://boostarea.net",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/boostarea-carousel.png",
+      image: "/boostarea_logo.png",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "",
+      bgColor: "bg-[#0f172a]",
     },
   ],
   hackathons: [
-    
+
     {
       title: "IELTS Academic",
       dates: "2025",

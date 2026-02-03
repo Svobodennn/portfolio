@@ -33,10 +33,10 @@ export default function Page() {
                 {DATA.contactButtonsFirstRow?.length > 0 && (
                   <div className="flex flex-row flex-wrap items-start gap-1">
                     {DATA.contactButtonsFirstRow.map((link, idx) => (
-                      <Link 
-                        href={link?.href} 
-                        key={idx} 
-                        target="_blank" 
+                      <Link
+                        href={link?.href}
+                        key={idx}
+                        target="_blank"
                         rel="noopener noreferrer"
                       >
                         <Badge className="flex gap-2 px-2 py-1 text-[10px]">
@@ -180,16 +180,17 @@ export default function Page() {
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
               <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
+                href={project.href}
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                dates={project.dates}
+                tags={project.technologies}
+                image={project.image}
+                video={project.video}
+                links={project.links}
+                bgColor={project.bgColor}
+              />
             </BlurFade>
           ))}
         </div>

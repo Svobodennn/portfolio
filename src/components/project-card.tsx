@@ -26,6 +26,7 @@ interface Props {
     href: string;
   }[];
   className?: string;
+  bgColor?: string;
 }
 
 export function ProjectCard({
@@ -39,6 +40,7 @@ export function ProjectCard({
   video,
   links,
   className,
+  bgColor,
 }: Props) {
   return (
     <Card
@@ -66,7 +68,7 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className={cn("h-40 w-full overflow-hidden object-contain object-top ", bgColor)}
           />
         )}
       </Link>
