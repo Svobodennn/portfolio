@@ -39,7 +39,7 @@ export const DATA = {
   contactButtonsFirstRow: [
     {
       type: "www.melihsarac.com",
-      href: "www.melihsarac.com",
+      href: "/",
       icon: <Icons.cv className="size-3" />,
     },
     {
