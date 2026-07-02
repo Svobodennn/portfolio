@@ -111,7 +111,7 @@ export const DATA = {
       start: "Jan 2024",
       end: "Dec 2025",
       description:
-        "Turkticaret.Net is a leading ***domain and hosting provider*** in Turkey, serving high-traffic digital services — ***domain registration***, ***hosting***, and ***SSL/security certificates***.\n\n- Cut key query and page response times by ***~40%*** by removing N+1 queries and adding ***Redis caching*** on hot paths.\n- Built and secured ***payment gateway*** integrations for recurring hosting and domain billing.\n- Automated recurring operations with ***cron jobs*** and ***queue workers***, removing hours of manual work each week.\n- Integrated an ***LLM-based support assistant*** to deflect first-line customer tickets.\n- Applied ***SOLID principles*** to keep a large PHP codebase maintainable under growing load.",
+        "Turkticaret.Net is a leading ***domain and hosting provider*** in Turkey, serving high-traffic digital services — ***domain registration***, ***hosting***, and ***SSL/security certificates***.\n\n- Cut key query and page response times by ***~40%*** by removing N+1 queries and adding ***Redis caching*** on hot paths.\n- Built and secured ***payment gateway*** integrations for recurring hosting and domain billing.\n- Automated recurring operations with ***cron jobs*** and ***queue workers***, removing hours of manual work each week.\n- Integrated an ***LLM-based assistant*** to automatically review and moderate user ***feedback content***.\n- Applied ***SOLID principles*** to keep a large PHP codebase maintainable under growing load.",
     },
     {
       company: "Turkticaret.Net",
@@ -171,7 +171,7 @@ export const DATA = {
       dates: "September 2025 - February 2026",
       active: true,
       description:
-        "ArabamSende.com is a ***vehicle auction and valuation platform***. I worked across the full lifecycle, from architecture to production.\n\n- Architected a ***real-time auction engine*** over ***WebSockets*** (Laravel Echo) for live bidding with ***hundreds of concurrent users***.\n- Ran the app on ***Laravel Octane + FrankenPHP*** (Caddy) for persistent, high-throughput request handling.\n- Integrated the ***payment system*** and tuned ***PostgreSQL*** and ***Redis*** for auction-time load.",
+        "ArabamSende.com is a ***vehicle auction and valuation platform***. I worked across the full lifecycle, from architecture to production.\n\n- Architected a ***real-time auction engine*** over ***WebSockets*** (Laravel Echo) for live bidding with ***thousands of concurrent users***.\n- Ran the app on ***Laravel Octane + FrankenPHP*** (Caddy) for persistent, high-throughput request handling.\n- Integrated the ***payment system*** and tuned ***PostgreSQL*** and ***Redis*** for auction-time load.",
       technologies: [
         "Laravel",
         "VueJS",
@@ -202,7 +202,7 @@ export const DATA = {
       dates: "Nov 2024 - May 2025",
       active: true,
       description:
-        "Boostarea.net is a ***service platform for online games***. I helped build the site end-to-end.\n\n- Implemented the ***order and payment flow*** with ***payment gateway*** integration on a ***PHP / Zend*** stack.\n- Added ***real-time*** order updates via ***WebSockets*** and tuned ***MySQL*** queries for the catalog.",
+        "Boostarea.net is a ***service platform for online games***. I worked ***full-stack*** on the site, across frontend and backend.\n\n- Built customer-facing pages with ***jQuery / Bootstrap*** and server-side features on a ***PHP / Zend*** stack.\n- Integrated the ***payment gateway*** and added ***real-time*** updates via ***WebSockets***, backed by ***MySQL***.",
       technologies: [
         "PHP",
         "JQuery",
