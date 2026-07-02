@@ -109,6 +109,7 @@ const en: ResumeText = {
     workflowNotes: [
       "A matrix of specialized agents — planning, implementation, code review, security, and verification — coordinated in an automated QA loop.",
       "Custom token-optimization tooling (RTK proxy) cuts AI-operation cost by 60–90%.",
+      "A self-improving loop: agent errors are captured, distilled into reusable rules, and tracked on a live dashboard — the system learns from its own mistakes.",
     ],
     tools: "Infrastructure & Tools",
     openToWork: "Open to Work",
@@ -205,6 +206,7 @@ const tr: ResumeText = {
     workflowNotes: [
       "Uzmanlaşmış ajan matrisi — planlama, geliştirme, kod incelemesi, güvenlik ve doğrulama — otomatik bir QA döngüsünde koordine edilir.",
       "Özel token-optimizasyon aracı (RTK proxy) AI-operasyon maliyetini %60–90 düşürür.",
+      "Kendini geliştiren döngü: ajan hataları yakalanır, tekrar kullanılabilir kurallara dönüştürülür ve canlı bir dashboard'da izlenir — sistem kendi hatalarından öğrenir.",
     ],
     tools: "Altyapı & Araçlar",
     openToWork: "İşe Açık",
@@ -301,6 +303,7 @@ const pl: ResumeText = {
     workflowNotes: [
       "Macierz wyspecjalizowanych agentów — planowanie, implementacja, przegląd kodu, bezpieczeństwo i weryfikacja — koordynowana w automatycznej pętli QA.",
       "Własne narzędzie optymalizacji tokenów (proxy RTK) obniża koszt operacji AI o 60–90%.",
+      "Samodoskonaląca się pętla: błędy agentów są wychwytywane, przekształcane w reguły wielokrotnego użytku i śledzone na żywym dashboardzie — system uczy się na własnych błędach.",
     ],
     tools: "Infrastruktura i narzędzia",
     openToWork: "Otwarty na pracę",
