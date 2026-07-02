@@ -36,6 +36,12 @@ const base = {
     "SEO",
     "Debugging Tools",
   ],
+  toolchain: [
+    { name: "Claude Code", icon: <Icons.claudeCode className="size-3.5" /> },
+    { name: "Codex", icon: <Icons.openai className="size-3.5" /> },
+    { name: "Cursor", icon: <Icons.cursor className="size-3.5" /> },
+    { name: "Antigravity", icon: <Icons.antigravity className="size-3.5" /> },
+  ],
   contactButtonsFirstRow: [
     {
       type: "www.melihsarac.com",

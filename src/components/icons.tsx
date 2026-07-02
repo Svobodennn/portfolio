@@ -226,4 +226,44 @@ export const Icons = {
       />
     </svg>
   ),
+  claudeCode: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>Claude Code</title>
+      <path
+        fill="#D97757"
+        d="M12 1.5c.52 4.06 1.24 6.3 3.02 8.08 1.78 1.78 4.02 2.5 8.08 3.02-4.06.52-6.3 1.24-8.08 3.02-1.78 1.78-2.5 4.02-3.02 8.08-.52-4.06-1.24-6.3-3.02-8.08-1.78-1.78-4.02-2.5-8.08-3.02 4.06-.52 6.3-1.24 8.08-3.02 1.78-1.78 2.5-4.02 3.02-8.08z"
+      />
+    </svg>
+  ),
+  cursor: (props: IconProps) => (
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      {...props}
+    >
+      <title>Cursor</title>
+      <path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.31 6.49 3.61L12 11.53 5.51 7.92 12 4.31ZM5 9.4l6 3.34v6.94l-6-3.34V9.4Zm14 0v6.94l-6 3.34v-6.94l6-3.34Z" />
+    </svg>
+  ),
+  antigravity: (props: IconProps) => (
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      {...props}
+    >
+      <title>Antigravity</title>
+      <circle cx="12" cy="12" r="3.2" fill="#4285F4" />
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="10"
+        ry="4.2"
+        transform="rotate(-30 12 12)"
+        stroke="#4285F4"
+        strokeWidth="1.6"
+      />
+    </svg>
+  ),
 };

@@ -16,6 +16,7 @@ export interface ResumeText {
     education: string;
     certificates: string;
     projects: string;
+    toolchain: string;
     openToWork: string;
     ctaTitle: string;
     ctaText: string;
@@ -95,6 +96,7 @@ const en: ResumeText = {
     education: "Education",
     certificates: "Certificates",
     projects: "Projects",
+    toolchain: "AI Toolchain",
     openToWork: "Open to Work",
     ctaTitle: "Let's build something",
     ctaText:
@@ -175,6 +177,7 @@ const tr: ResumeText = {
     education: "Eğitim",
     certificates: "Sertifikalar",
     projects: "Projeler",
+    toolchain: "AI Araç Seti",
     openToWork: "İşe Açık",
     ctaTitle: "Birlikte bir şeyler inşa edelim",
     ctaText:
@@ -255,6 +258,7 @@ const pl: ResumeText = {
     education: "Wykształcenie",
     certificates: "Certyfikaty",
     projects: "Projekty",
+    toolchain: "Zestaw narzędzi AI",
     openToWork: "Otwarty na pracę",
     ctaTitle: "Zbudujmy coś razem",
     ctaText:

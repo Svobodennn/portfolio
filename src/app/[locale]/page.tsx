@@ -145,6 +145,26 @@ export default function Page({ params }: { params: { locale: string } }) {
           </div>
         </div>
       </section>
+      <section id="toolchain">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <h2 className="text-xl font-bold">{data.ui.toolchain}</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <div className="flex flex-wrap gap-2">
+              {data.toolchain.map((tool) => (
+                <div
+                  key={tool.name}
+                  className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1 text-xs font-medium"
+                >
+                  {tool.icon}
+                  {tool.name}
+                </div>
+              ))}
+            </div>
+          </BlurFade>
+        </div>
+      </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
