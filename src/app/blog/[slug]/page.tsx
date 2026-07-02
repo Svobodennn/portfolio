@@ -17,15 +17,21 @@ export async function generateMetadata({
     slug: string;
   };
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  const post = await getPost(params.slug);
 
-  let {
+  if (!post) {
+    return;
+  }
+
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  const ogImage = image
+    ? `${DATA.url}${image}`
+    : `${DATA.url}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
@@ -58,7 +64,7 @@ export default async function Blog({
     slug: string;
   };
 }) {
-  let post = await getPost(params.slug);
+  const post = await getPost(params.slug);
 
   if (!post) {
     notFound();
@@ -79,7 +85,9 @@ export default async function Blog({
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/og?title=${post.metadata.title}`,
+              : `${DATA.url}/og?title=${encodeURIComponent(
+                  post.metadata.title
+                )}`,
             url: `${DATA.url}/blog/${post.slug}`,
             author: {
               "@type": "Person",

@@ -14,6 +14,14 @@ type Metadata = {
   image?: string;
 };
 
+export type Post = {
+  source: string;
+  metadata: Metadata;
+  slug: string;
+};
+
+const CONTENT_DIR = path.join(process.cwd(), "content");
+
 function getMDXFiles(dir: string) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
 }
@@ -36,33 +44,35 @@ export async function markdownToHTML(markdown: string) {
   return p.toString();
 }
 
-export async function getPost(slug: string) {
-  const filePath = path.join("content", `${slug}.mdx`);
-  let source = fs.readFileSync(filePath, "utf-8");
-  const { content: rawContent, data: metadata } = matter(source);
+export async function getPost(slug: string): Promise<Post | null> {
+  const filePath = path.join(CONTENT_DIR, `${slug}.mdx`);
+
+  // Unknown slug -> null, so callers can 404 cleanly instead of crashing.
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+
+  const source = fs.readFileSync(filePath, "utf-8");
+  const { content: rawContent, data } = matter(source);
   const content = await markdownToHTML(rawContent);
+
   return {
     source: content,
-    metadata,
+    metadata: data as Metadata,
     slug,
   };
 }
 
-async function getAllPosts(dir: string) {
-  let mdxFiles = getMDXFiles(dir);
-  return Promise.all(
-    mdxFiles.map(async (file) => {
-      let slug = path.basename(file, path.extname(file));
-      let { metadata, source } = await getPost(slug);
-      return {
-        metadata,
-        slug,
-        source,
-      };
-    })
+async function getAllPosts(dir: string): Promise<Post[]> {
+  const mdxFiles = getMDXFiles(dir);
+  const posts = await Promise.all(
+    mdxFiles.map((file) =>
+      getPost(path.basename(file, path.extname(file)))
+    )
   );
+  return posts.filter((post): post is Post => post !== null);
 }
 
 export async function getBlogPosts() {
-  return getAllPosts(path.join(process.cwd(), "content"));
+  return getAllPosts(CONTENT_DIR);
 }
