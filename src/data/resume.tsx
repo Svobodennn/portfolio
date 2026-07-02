@@ -1,19 +1,16 @@
 import { Icons } from "@/components/icons";
+import { RESUME_TEXT } from "@/data/content";
+import { defaultLocale, type Locale } from "@/i18n/config";
 import { HomeIcon } from "lucide-react";
 
-export const DATA = {
+// Locale-independent structure: URLs, icons, logos, dates, tech, contact info.
+// Translatable text lives in src/data/content.ts and is merged in by locale.
+const base = {
   name: "Melih SARAÇ",
   initials: "MS",
   url: "https://melihsarac.com",
   location: "Bursa, TR",
   locationLink: "https://www.google.com/maps/place/bursa",
-  description:
-    "Backend Developer",
-  seoDescription:
-    "Melih SARAÇ — Backend Developer in Bursa, Turkey. PHP/Laravel & Node.js: REST APIs, payment integrations, PostgreSQL/MySQL, Redis and Docker.",
-  summaryFirst:
-    "I am an experienced backend developer with solid expertise in ***PHP and Laravel***, along with hands-on experience in ***database management***, ***RESTful API development***, and ***payment systems integration***. I have worked on various projects utilizing technologies like ***PHP***, ***Laravel***, ***NodeJS***. Additionally, I emphasize the use of ***SOLID principles*** and best practices to deliver high-quality, scalable, and secure solutions. I am dedicated to ***teamwork***, ensuring the successful completion of every project.",
-  summarySecond: "In addition to my technical skills, I am passionate about art, dance, sports, music, photography, and motorcycles, all of which fuel my creativity and enhance my problem-solving abilities.",
   resumeUrl: "/Melih_Sarac_CV.pdf",
   avatarUrl: "/me3.png",
   skills: [
@@ -34,9 +31,6 @@ export const DATA = {
     "SEO",
     "LLM & AI Assistants",
     "Debugging Tools",
-  ],
-  navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
   ],
   contactButtonsFirstRow: [
     {
@@ -80,69 +74,49 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/Svobodennn",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/melihsarac/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       email: {
         name: "Send Email",
         url: "mailto:melih.sarac@hotmail.com",
         icon: Icons.email,
-
         navbar: false,
       },
     },
   },
-
   work: [
     {
       company: "Turkticaret.Net",
       href: "https://turkticaret.net",
-      badges: ['Full Time'],
-      location: "Remote",
-      title: "Backend Developer",
       logoUrl: "/turkticaretnet-logo.jpeg",
       start: "Jan 2024",
       end: "Dec 2025",
-      description:
-        "Turkticaret.Net is a leading ***domain and hosting provider*** in Turkey, serving high-traffic digital services — ***domain registration***, ***hosting***, and ***SSL/security certificates***.\n\n- Cut key query and page response times by ***~40%*** by removing N+1 queries and adding ***Redis caching*** on hot paths.\n- Built and secured ***payment gateway*** integrations for recurring hosting and domain billing.\n- Automated recurring operations with ***cron jobs*** and ***queue workers***, removing hours of manual work each week.\n- Integrated an ***LLM-based assistant*** to automatically review and moderate user ***feedback content***.\n- Applied ***SOLID principles*** to keep a large PHP codebase maintainable under growing load.",
     },
     {
       company: "Turkticaret.Net",
-      badges: ['Workplace Training'],
       href: "https://turkticaret.net",
-      location: "On-Site",
-      title: "Intern",
       logoUrl: "/turkticaretnet-logo.jpeg",
       start: "October 2022",
       end: "January 2023",
-      description:
-        "I improved myself further with ***HTML, CSS, JavaScript and JQeury***. I also handled the backend with ***PHP, SQL***. Additionally I learned fundamentals of ***Nodejs*** and frameworks like ***Laravel*** and ***Django***. I got familiar with content management systems and ***MVC structure***.",
     },
     {
       company: "Turkticaret.Net",
       href: "https://turkticaret.net",
-      badges: ['Internship'],
-      location: "On-Site",
-      title: "Intern",
       logoUrl: "/turkticaretnet-logo.jpeg",
       start: "June 2022",
       end: "August 2022",
-      description:
-        "I learned the technologies that make websites work, like ***HTML, CSS, JavaScript***. I learned and deployed a webiste using ***JQuery*** and ***PHP*** with ***MySQL database***",
     },
   ],
   education: [
     {
       school: "University of Lodz",
       href: "https://www.uni.lodz.pl/en/",
-      degree: "Erasmus - Computer Science",
       logoUrl: "/logo_UL_white.png",
       start: "Feb 2023",
       end: "Jul 2023",
@@ -150,7 +124,6 @@ export const DATA = {
     {
       school: "Bursa Uludağ University",
       href: "https://www.uludag.edu.tr",
-      degree: "Associate's Degree of Computer Science (ACS) | CGPA 3.53/4.00",
       logoUrl: "/uu.svg",
       start: "2021",
       end: "2023",
@@ -158,7 +131,6 @@ export const DATA = {
     {
       school: "MSÜ Kara Harp Okulu",
       href: "https://www.msu.edu.tr",
-      degree: "Bachelor's Degree | Russian Prepatory",
       logoUrl: "/msu_logo.png",
       start: "2019",
       end: "2021",
@@ -170,8 +142,6 @@ export const DATA = {
       href: "https://arabamsende.com",
       dates: "September 2025 - February 2026",
       active: true,
-      description:
-        "ArabamSende.com is a ***vehicle auction and valuation platform***. I worked across the full lifecycle, from architecture to production.\n\n- Architected a ***real-time auction engine*** over ***WebSockets*** (Laravel Echo) for live bidding with ***thousands of concurrent users***.\n- Ran the app on ***Laravel Octane + FrankenPHP*** (Caddy) for persistent, high-throughput request handling.\n- Integrated the ***payment system*** and tuned ***PostgreSQL*** and ***Redis*** for auction-time load.",
       technologies: [
         "Laravel",
         "VueJS",
@@ -201,8 +171,6 @@ export const DATA = {
       href: "https://boostarea.net",
       dates: "Nov 2024 - May 2025",
       active: true,
-      description:
-        "Boostarea.net is a ***service platform for online games***. I worked ***full-stack*** on the site, across frontend and backend.\n\n- Built customer-facing pages with ***jQuery / Bootstrap*** and server-side features on a ***PHP / Zend*** stack.\n- Integrated the ***payment gateway*** and added ***real-time*** updates via ***WebSockets***, backed by ***MySQL***.",
       technologies: [
         "PHP",
         "JQuery",
@@ -225,40 +193,37 @@ export const DATA = {
       bgColor: "bg-[#0f172a]",
     },
   ],
-  hackathons: [
-
-    {
-      title: "IELTS Academic",
-      dates: "2025",
-      location: "British Council",
-      description:
-        "C1 | 7.5",
-      image:
-        "",
-      mlh: "",
-      links: [],
-    },
-    {
-      title: "Backend Web Development Path with Beginner Level PHP",
-      dates: "2021",
-      location: "Patika.Dev",
-      description:
-        "Patika.Dev",
-      image:
-        "",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "Language (Russian) - MSÜ",
-      dates: "2020",
-      location: "MSÜ Kara Harp Okulu",
-      description:
-        "Certificate of Excellence in Russian Preparatory Course",
-      icon: "public",
-      image:
-        "",
-      links: [],
-    }
+  certificates: [
+    { dates: "2025", image: "", links: [] },
+    { dates: "2021", image: "", links: [] },
+    { dates: "2020", image: "", links: [] },
   ],
-} as const;
+};
+
+export function getUI(locale: Locale) {
+  return RESUME_TEXT[locale].ui;
+}
+
+export function getResume(locale: Locale) {
+  const t = RESUME_TEXT[locale];
+  return {
+    ...base,
+    description: t.description,
+    seoDescription: t.seoDescription,
+    summaryFirst: t.summaryFirst,
+    summarySecond: t.summarySecond,
+    navbar: [{ href: "/", icon: HomeIcon, label: t.ui.home }],
+    work: base.work.map((entry, i) => ({ ...entry, ...t.work[i] })),
+    education: base.education.map((entry, i) => ({ ...entry, ...t.education[i] })),
+    projects: base.projects.map((entry, i) => ({ ...entry, ...t.projects[i] })),
+    hackathons: base.certificates.map((entry, i) => ({
+      ...entry,
+      ...t.certificates[i],
+    })),
+    ui: t.ui,
+  };
+}
+
+// Default-locale snapshot for locale-agnostic consumers (metadata base, sitemap,
+// robots, OG image, RSS feed).
+export const DATA = getResume(defaultLocale);

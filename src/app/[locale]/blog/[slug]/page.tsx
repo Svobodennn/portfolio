@@ -1,5 +1,6 @@
 import { getBlogPosts, getPost } from "@/data/blog";
 import { DATA } from "@/data/resume";
+import { isLocale, locales, localePath } from "@/i18n/config";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -7,18 +8,17 @@ import { Suspense } from "react";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  return locales.flatMap((locale) =>
+    posts.map((post) => ({ locale, slug: post.slug }))
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: {
-    slug: string;
-  };
+  params: { locale: string; slug: string };
 }): Promise<Metadata | undefined> {
   const post = await getPost(params.slug);
-
   if (!post) {
     return;
   }
@@ -32,21 +32,21 @@ export async function generateMetadata({
   const ogImage = image
     ? `${DATA.url}${image}`
     : `${DATA.url}/og?title=${encodeURIComponent(title)}`;
+  const canonical = isLocale(params.locale)
+    ? localePath(params.locale, `/blog/${post.slug}`)
+    : `/blog/${post.slug}`;
 
   return {
     title,
     description,
+    alternates: { canonical },
     openGraph: {
       title,
       description,
       type: "article",
       publishedTime,
-      url: `${DATA.url}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      url: `${DATA.url}${canonical}`,
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: "summary_large_image",
@@ -60,10 +60,11 @@ export async function generateMetadata({
 export default async function Blog({
   params,
 }: {
-  params: {
-    slug: string;
-  };
+  params: { locale: string; slug: string };
 }) {
+  if (!isLocale(params.locale)) {
+    notFound();
+  }
   const post = await getPost(params.slug);
 
   if (!post) {
@@ -88,7 +89,7 @@ export default async function Blog({
               : `${DATA.url}/og?title=${encodeURIComponent(
                   post.metadata.title
                 )}`,
-            url: `${DATA.url}/blog/${post.slug}`,
+            url: `${DATA.url}${localePath(params.locale, `/blog/${post.slug}`)}`,
             author: {
               "@type": "Person",
               name: DATA.name,

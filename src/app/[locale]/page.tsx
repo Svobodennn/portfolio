@@ -1,34 +1,41 @@
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { DATA } from "@/data/resume";
+import { getResume } from "@/data/resume";
 import { BLUR_FADE_DELAY } from "@/lib/constants";
+import { isLocale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 
-export default function Page() {
+export default function Page({ params }: { params: { locale: string } }) {
+  const locale = params.locale;
+  if (!isLocale(locale)) {
+    notFound();
+  }
+  const data = getResume(locale);
+
   const personLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: DATA.name,
-    jobTitle: DATA.description,
-    url: DATA.url,
-    image: `${DATA.url}${DATA.avatarUrl}`,
-    email: DATA.contact.email,
+    name: data.name,
+    jobTitle: data.description,
+    url: data.url,
+    image: `${data.url}${data.avatarUrl}`,
+    email: data.contact.email,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bursa",
       addressCountry: "TR",
     },
-    sameAs: [DATA.contact.social.GitHub.url, DATA.contact.social.LinkedIn.url],
-    knowsAbout: DATA.skills,
-    alumniOf: DATA.education.map((entry) => ({
+    sameAs: [data.contact.social.GitHub.url, data.contact.social.LinkedIn.url],
+    knowsAbout: data.skills,
+    alumniOf: data.education.map((entry) => ({
       "@type": "CollegeOrUniversity",
       name: entry.school,
     })),
@@ -46,17 +53,17 @@ export default function Page() {
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                {DATA.name}
+                {data.name}
               </h1>
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
-                text={DATA.description}
+                text={data.description}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 5}>
-                {DATA.contactButtonsFirstRow?.length > 0 && (
+                {data.contactButtonsFirstRow?.length > 0 && (
                   <div className="flex flex-row flex-wrap items-start gap-1">
-                    {DATA.contactButtonsFirstRow.map((link, idx) => (
+                    {data.contactButtonsFirstRow.map((link, idx) => (
                       <Link
                         href={link?.href}
                         key={idx}
@@ -74,29 +81,33 @@ export default function Page() {
               </BlurFade>
 
               <BlurFade delay={BLUR_FADE_DELAY * 5}>
-                {DATA.contactButtonsSecondRow && DATA.contactButtonsSecondRow.length > 0 && (
-                  <div className="flex flex-row flex-wrap items-start gap-1">
-                    {DATA.contactButtonsSecondRow?.map((link, idx) => (
-                      <Link
-                        href={link?.href}
-                        key={idx}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] items-center justify-center">
-                          {link.icon}
-                          {link.type}
-                        </Badge>
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                {data.contactButtonsSecondRow &&
+                  data.contactButtonsSecondRow.length > 0 && (
+                    <div className="flex flex-row flex-wrap items-start gap-1">
+                      {data.contactButtonsSecondRow?.map((link, idx) => (
+                        <Link
+                          href={link?.href}
+                          key={idx}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Badge
+                            key={idx}
+                            className="flex gap-2 px-2 py-1 text-[10px] items-center justify-center"
+                          >
+                            {link.icon}
+                            {link.type}
+                          </Badge>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
               </BlurFade>
             </div>
             <div className="relative size-28 shrink-0 overflow-hidden rounded-full border">
               <Image
-                src={DATA.avatarUrl}
-                alt={DATA.name}
+                src={data.avatarUrl}
+                alt={data.name}
                 fill
                 sizes="112px"
                 priority
@@ -108,25 +119,25 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-xl font-bold">{data.ui.about}</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summaryFirst}
+            {data.summaryFirst}
           </Markdown>
           <hr className="my-4" />
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summarySecond}
+            {data.summarySecond}
           </Markdown>
         </BlurFade>
       </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <h2 className="text-xl font-bold">{data.ui.skills}</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
+            {data.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
@@ -137,13 +148,10 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <h2 className="text-xl font-bold">{data.ui.workExperience}</h2>
           </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
+          {data.work.map((work, id) => (
+            <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ResumeCard
                 key={work.company}
                 logoUrl={work.logoUrl}
@@ -161,9 +169,9 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
+            <h2 className="text-xl font-bold">{data.ui.education}</h2>
           </BlurFade>
-          {DATA.education.map((education, id) => (
+          {data.education.map((education, id) => (
             <BlurFade
               key={education.school}
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
@@ -183,13 +191,10 @@ export default function Page() {
       <section id="certificates">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Certificates</h2>
+            <h2 className="text-xl font-bold">{data.ui.certificates}</h2>
           </BlurFade>
-          {DATA.hackathons.map((project, id) => (
-            <BlurFade
-              key={project.title}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
+          {data.hackathons.map((project, id) => (
+            <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <ResumeCard
                 key={project.title}
                 logoUrl={project.image}
@@ -205,13 +210,10 @@ export default function Page() {
       <section id="projects">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Projects</h2>
+            <h2 className="text-xl font-bold">{data.ui.projects}</h2>
           </BlurFade>
-          {DATA.projects.map((project, id) => (
-            <BlurFade
-              key={project.title}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
+          {data.projects.map((project, id) => (
+            <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <ProjectCard
                 href={project.href}
                 key={project.title}
@@ -231,28 +233,27 @@ export default function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-              Open to Work
+              {data.ui.openToWork}
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              Let&apos;s build something
+              {data.ui.ctaTitle}
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-lg">
-              Open to Full-stack and Backend roles — remote, hybrid, or on-site,
-              and open to relocation. Reach out and let&apos;s talk.
+              {data.ui.ctaText}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
               <a
-                href={`mailto:${DATA.contact.email}`}
+                href={`mailto:${data.contact.email}`}
                 className={cn(buttonVariants({ variant: "default" }))}
               >
-                Email me
+                {data.ui.emailMe}
               </a>
               <a
-                href={DATA.resumeUrl}
+                href={data.resumeUrl}
                 download
                 className={cn(buttonVariants({ variant: "outline" }))}
               >
-                Download CV
+                {data.ui.downloadCv}
               </a>
             </div>
           </div>
