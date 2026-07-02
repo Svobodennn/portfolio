@@ -13,7 +13,7 @@
 
 I am an experienced backend developer with solid expertise in **PHP and Laravel**, along with hands-on experience in **database management**, **RESTful API development**, and **payment systems integration**.
 
-I have worked on various projects utilizing technologies like **ProstgreSQL**, **MySQL**, **Redis**, and **Docker**. Additionally, I emphasize the use of **SOLID principles** and best practices to deliver high-quality, scalable, and secure solutions.
+I have worked on various projects utilizing technologies like **PostgreSQL**, **MySQL**, **Redis**, and **Docker**. Additionally, I emphasize the use of **SOLID principles** and best practices to deliver high-quality, scalable, and secure solutions.
 
 I am passionate about building efficient backend architectures and ensuring the seamless operation of high-traffic applications.
 
