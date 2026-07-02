@@ -52,16 +52,6 @@ export function ProjectCard({
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
       >
-        {/* {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
-          />
-        )} */}
         {image && (
           <div className={cn("h-40 w-full flex items-center justify-center overflow-hidden relative", bgColor)}>
             <Image
