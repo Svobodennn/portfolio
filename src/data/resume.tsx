@@ -43,13 +43,13 @@ const base = {
     { name: "Antigravity", logo: "/logos/antigravity.svg", invert: false },
   ],
   tools: [
-    { name: "Vercel", color: "#8b8b8b" },
-    { name: "DigitalOcean", color: "#0080FF" },
-    { name: "Dokploy", color: "#7C3AED" },
-    { name: "Cloudflare", color: "#F38020" },
-    { name: "PostHog", color: "#F54E00" },
-    { name: "Grafana", color: "#F46800" },
-    { name: "Brevo", color: "#0B996E" },
+    { name: "Vercel", logo: "/logos/vercel.svg", invert: true, color: "#8b8b8b" },
+    { name: "DigitalOcean", logo: "/logos/digitalocean.svg", invert: false, color: "#0080FF" },
+    { name: "Cloudflare", logo: "/logos/cloudflare.svg", invert: false, color: "#F38020" },
+    { name: "Dokploy", logo: "", invert: false, color: "#7C3AED" },
+    { name: "PostHog", logo: "/logos/posthog.svg", invert: true, color: "#000000" },
+    { name: "Grafana", logo: "/logos/grafana.svg", invert: false, color: "#F46800" },
+    { name: "Brevo", logo: "/logos/brevo.svg", invert: false, color: "#0B996E" },
   ],
   contactButtonsFirstRow: [
     {

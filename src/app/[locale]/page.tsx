@@ -146,48 +146,12 @@ export default function Page({ params }: { params: { locale: string } }) {
           </div>
         </div>
       </section>
-      <section id="workflow">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">{data.ui.workflow}</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <p className="text-sm text-muted-foreground">
-              {data.ui.workflowIntro}
-            </p>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2">
-              {data.ui.workflowSteps.map((step, id) => (
-                <div key={step} className="flex items-center gap-x-1.5">
-                  <span className="rounded-full border bg-card px-3 py-1 text-xs font-medium">
-                    {step}
-                  </span>
-                  {id < data.ui.workflowSteps.length - 1 && (
-                    <ChevronRightIcon className="size-3 shrink-0 text-muted-foreground" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <ul className="mt-1 space-y-1.5 text-sm text-muted-foreground">
-              {data.ui.workflowNotes.map((note) => (
-                <li key={note} className="flex gap-2">
-                  <span className="text-foreground">—</span>
-                  <span>{note}</span>
-                </li>
-              ))}
-            </ul>
-          </BlurFade>
-        </div>
-      </section>
       <section id="toolchain">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">{data.ui.toolchain}</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <div className="flex flex-wrap gap-2">
               {data.toolchain.map((tool) => (
                 <div
@@ -207,24 +171,64 @@ export default function Page({ params }: { params: { locale: string } }) {
               ))}
             </div>
           </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <p className="text-sm text-muted-foreground">
+              {data.ui.workflowIntro}
+            </p>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2">
+              {data.ui.workflowSteps.map((step, id) => (
+                <div key={step} className="flex items-center gap-x-1.5">
+                  <span className="rounded-full border bg-card px-3 py-1 text-xs font-medium">
+                    {step}
+                  </span>
+                  {id < data.ui.workflowSteps.length - 1 && (
+                    <ChevronRightIcon className="size-3 shrink-0 text-muted-foreground" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {data.ui.workflowNotes.map((note) => (
+                <li key={note} className="flex gap-2">
+                  <span className="text-foreground">—</span>
+                  <span>{note}</span>
+                </li>
+              ))}
+            </ul>
+          </BlurFade>
         </div>
       </section>
       <section id="tools">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <h2 className="text-xl font-bold">{data.ui.tools}</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
             <div className="flex flex-wrap gap-2">
               {data.tools.map((tool) => (
                 <div
                   key={tool.name}
                   className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1 text-xs font-medium"
                 >
-                  <span
-                    className="size-2 rounded-full"
-                    style={{ backgroundColor: tool.color }}
-                  />
+                  {tool.logo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={tool.logo}
+                      alt=""
+                      width={16}
+                      height={16}
+                      className={cn("size-4", tool.invert && "dark:invert")}
+                    />
+                  ) : (
+                    <span
+                      className="size-2 rounded-full"
+                      style={{ backgroundColor: tool.color }}
+                    />
+                  )}
                   {tool.name}
                 </div>
               ))}
