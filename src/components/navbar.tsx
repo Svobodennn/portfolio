@@ -25,6 +25,7 @@ export default function Navbar() {
               <TooltipTrigger asChild>
                 <Link
                   href={item.href}
+                  aria-label={item.label}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
@@ -48,6 +49,7 @@ export default function Navbar() {
                 <TooltipTrigger asChild>
                   <Link
                     href={social.url}
+                    aria-label={name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"
@@ -78,6 +80,7 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger asChild>
               <button
+                aria-label="Download as PDF"
                 onClick={() => {
                   window.print();
                 }}
