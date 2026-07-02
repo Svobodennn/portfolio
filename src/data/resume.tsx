@@ -111,7 +111,7 @@ export const DATA = {
       start: "Jan 2024",
       end: "Dec 2025",
       description:
-        "Turkticaret.Net is a leading ***domain and hosting provider*** in Turkey, offering comprehensive digital services including ***domain registration***, ***hosting solutions***, and ***security certificates***.\n\nI developed scalable backend architectures using ***PHP*** and ***SOLID principles*** to support high-traffic operations. I optimized ***MySQL database*** performance by refactoring complex queries and implementing ***Redis caching***. I secured ***payment gateway*** integrations and automated repetitive workflows using ***cron jobs*** and ***queue workers***. Additionally, I integrated ***LLM-based AI assistants*** to improve customer support efficiency.",
+        "Turkticaret.Net is a leading ***domain and hosting provider*** in Turkey, serving high-traffic digital services — ***domain registration***, ***hosting***, and ***SSL/security certificates***.\n\n- Cut key query and page response times by ***~40%*** by removing N+1 queries and adding ***Redis caching*** on hot paths.\n- Built and secured ***payment gateway*** integrations for recurring hosting and domain billing.\n- Automated recurring operations with ***cron jobs*** and ***queue workers***, removing hours of manual work each week.\n- Integrated an ***LLM-based support assistant*** to deflect first-line customer tickets.\n- Applied ***SOLID principles*** to keep a large PHP codebase maintainable under growing load.",
     },
     {
       company: "Turkticaret.Net",
@@ -171,7 +171,7 @@ export const DATA = {
       dates: "September 2025 - February 2026",
       active: true,
       description:
-        "ArabamSende.com is a vehicle auction and valuation platform. I contributed to the full lifecycle development of the system, from initial architecture to production.",
+        "ArabamSende.com is a ***vehicle auction and valuation platform***. I worked across the full lifecycle, from architecture to production.\n\n- Architected a ***real-time auction engine*** over ***WebSockets*** (Laravel Echo) for live bidding with ***hundreds of concurrent users***.\n- Ran the app on ***Laravel Octane + FrankenPHP*** (Caddy) for persistent, high-throughput request handling.\n- Integrated the ***payment system*** and tuned ***PostgreSQL*** and ***Redis*** for auction-time load.",
       technologies: [
         "Laravel",
         "VueJS",
@@ -202,7 +202,7 @@ export const DATA = {
       dates: "Nov 2024 - May 2025",
       active: true,
       description:
-        "Boostarea.net is a service that provides services for online games. I took part in the development of the website.",
+        "Boostarea.net is a ***service platform for online games***. I helped build the site end-to-end.\n\n- Implemented the ***order and payment flow*** with ***payment gateway*** integration on a ***PHP / Zend*** stack.\n- Added ***real-time*** order updates via ***WebSockets*** and tuned ***MySQL*** queries for the catalog.",
       technologies: [
         "PHP",
         "JQuery",
