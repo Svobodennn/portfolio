@@ -12,8 +12,35 @@ import Markdown from "react-markdown";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const personLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: DATA.name,
+    jobTitle: DATA.description,
+    url: DATA.url,
+    image: `${DATA.url}${DATA.avatarUrl}`,
+    email: DATA.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Bursa",
+      addressCountry: "TR",
+    },
+    sameAs: [DATA.contact.social.GitHub.url, DATA.contact.social.LinkedIn.url],
+    knowsAbout: DATA.skills,
+    alumniOf: DATA.education.map((entry) => ({
+      "@type": "CollegeOrUniversity",
+      name: entry.school,
+    })),
+  };
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-8">
+      <h1 className="sr-only">{`${DATA.name} — ${DATA.description}`}</h1>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+      />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -187,7 +214,6 @@ export default function Page() {
                 dates={project.dates}
                 tags={project.technologies}
                 image={project.image}
-                video={project.video}
                 links={project.links}
                 bgColor={project.bgColor}
               />

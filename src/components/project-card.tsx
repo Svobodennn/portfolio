@@ -19,7 +19,6 @@ interface Props {
   tags: readonly string[];
   link?: string;
   image?: string;
-  video?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -37,7 +36,6 @@ export function ProjectCard({
   tags,
   link,
   image,
-  video,
   links,
   className,
   bgColor,

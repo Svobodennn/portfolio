@@ -9,6 +9,8 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/bursa",
   description:
     "Backend Developer",
+  seoDescription:
+    "Melih SARAÇ — Backend Developer in Bursa, Turkey. PHP/Laravel & Node.js: REST APIs, payment integrations, PostgreSQL/MySQL, Redis and Docker.",
   summaryFirst:
     "I am an experienced backend developer with solid expertise in ***PHP and Laravel***, along with hands-on experience in ***database management***, ***RESTful API development***, and ***payment systems integration***. I have worked on various projects utilizing technologies like ***PHP***, ***Laravel***, ***NodeJS***. Additionally, I emphasize the use of ***SOLID principles*** and best practices to deliver high-quality, scalable, and secure solutions. I am dedicated to ***teamwork***, ensuring the successful completion of every project.",
   summarySecond: "In addition to my technical skills, I am passionate about art, dance, sports, music, photography, and motorcycles, all of which fuel my creativity and enhance my problem-solving abilities.",
@@ -90,7 +92,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:melih.sarac@hotmail.com",
         icon: Icons.email,
 
         navbar: false,
@@ -192,8 +194,6 @@ export const DATA = {
         },
       ],
       image: "/arabamsende_logo.png",
-      video:
-        "",
       bgColor: "bg-[#FFCE37]",
     },
     {
@@ -222,8 +222,6 @@ export const DATA = {
         },
       ],
       image: "/boostarea_logo.png",
-      video:
-        "",
       bgColor: "bg-[#0f172a]",
     },
   ],
