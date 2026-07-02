@@ -17,6 +17,11 @@ export interface ResumeText {
     certificates: string;
     projects: string;
     toolchain: string;
+    workflow: string;
+    workflowIntro: string;
+    workflowSteps: string[];
+    workflowNotes: string[];
+    tools: string;
     openToWork: string;
     ctaTitle: string;
     ctaText: string;
@@ -97,6 +102,15 @@ const en: ResumeText = {
     certificates: "Certificates",
     projects: "Projects",
     toolchain: "AI Toolchain",
+    workflow: "How I Work",
+    workflowIntro:
+      "Every feature runs through a structured, AI-augmented multi-agent workflow:",
+    workflowSteps: ["Plan", "Review", "Multi-agent build", "Automated QA", "Ship"],
+    workflowNotes: [
+      "A matrix of specialized agents — planning, implementation, code review, security, and verification — coordinated in an automated QA loop.",
+      "Custom token-optimization tooling (RTK proxy) cuts AI-operation cost by 60–90%.",
+    ],
+    tools: "Infrastructure & Tools",
     openToWork: "Open to Work",
     ctaTitle: "Let's build something",
     ctaText:
@@ -178,6 +192,21 @@ const tr: ResumeText = {
     certificates: "Sertifikalar",
     projects: "Projeler",
     toolchain: "AI Araç Seti",
+    workflow: "Nasıl Çalışıyorum",
+    workflowIntro:
+      "Her özelliği yapılandırılmış, AI-destekli çok-ajanlı bir akıştan geçiriyorum:",
+    workflowSteps: [
+      "Planla",
+      "İncele",
+      "Çok-ajanlı geliştirme",
+      "Otomatik QA",
+      "Yayınla",
+    ],
+    workflowNotes: [
+      "Uzmanlaşmış ajan matrisi — planlama, geliştirme, kod incelemesi, güvenlik ve doğrulama — otomatik bir QA döngüsünde koordine edilir.",
+      "Özel token-optimizasyon aracı (RTK proxy) AI-operasyon maliyetini %60–90 düşürür.",
+    ],
+    tools: "Altyapı & Araçlar",
     openToWork: "İşe Açık",
     ctaTitle: "Birlikte bir şeyler inşa edelim",
     ctaText:
@@ -259,6 +288,21 @@ const pl: ResumeText = {
     certificates: "Certyfikaty",
     projects: "Projekty",
     toolchain: "Zestaw narzędzi AI",
+    workflow: "Jak pracuję",
+    workflowIntro:
+      "Każdą funkcję prowadzę przez ustrukturyzowany, wspierany przez AI, wieloagentowy przepływ:",
+    workflowSteps: [
+      "Planowanie",
+      "Przegląd",
+      "Budowa wieloagentowa",
+      "Automatyczne QA",
+      "Wdrożenie",
+    ],
+    workflowNotes: [
+      "Macierz wyspecjalizowanych agentów — planowanie, implementacja, przegląd kodu, bezpieczeństwo i weryfikacja — koordynowana w automatycznej pętli QA.",
+      "Własne narzędzie optymalizacji tokenów (proxy RTK) obniża koszt operacji AI o 60–90%.",
+    ],
+    tools: "Infrastruktura i narzędzia",
     openToWork: "Otwarty na pracę",
     ctaTitle: "Zbudujmy coś razem",
     ctaText:

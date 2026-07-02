@@ -37,10 +37,19 @@ const base = {
     "Debugging Tools",
   ],
   toolchain: [
-    { name: "Claude Code", icon: <Icons.claudeCode className="size-3.5" /> },
-    { name: "Codex", icon: <Icons.openai className="size-3.5" /> },
-    { name: "Cursor", icon: <Icons.cursor className="size-3.5" /> },
-    { name: "Antigravity", icon: <Icons.antigravity className="size-3.5" /> },
+    { name: "Claude Code", logo: "/logos/claude.svg", invert: false },
+    { name: "Codex", logo: "/logos/codex.svg", invert: false },
+    { name: "Cursor", logo: "/logos/cursor.svg", invert: true },
+    { name: "Antigravity", logo: "/logos/antigravity.svg", invert: false },
+  ],
+  tools: [
+    { name: "Vercel", color: "#8b8b8b" },
+    { name: "DigitalOcean", color: "#0080FF" },
+    { name: "Dokploy", color: "#7C3AED" },
+    { name: "Cloudflare", color: "#F38020" },
+    { name: "PostHog", color: "#F54E00" },
+    { name: "Grafana", color: "#F46800" },
+    { name: "Brevo", color: "#0B996E" },
   ],
   contactButtonsFirstRow: [
     {
