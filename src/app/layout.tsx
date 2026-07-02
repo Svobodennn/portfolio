@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   creator: DATA.name,
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
   },
   openGraph: {
     title: `${DATA.name}`,
