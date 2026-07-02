@@ -61,6 +61,7 @@ const base = {
     { name: "Linear", logo: "/logos/linear.svg", invert: false, color: "#5E6AD2", category: "comms" },
     { name: "Jira", logo: "/logos/jira.svg", invert: false, color: "#0052CC", category: "comms" },
     { name: "Brevo", logo: "/logos/brevo.svg", invert: false, color: "#0B996E", category: "api" },
+    { name: "Netgsm", logo: "", invert: false, color: "#0072BC", category: "api" },
     { name: "OpenRouter", logo: "/logos/openrouter.svg", invert: false, color: "#94A3B8", category: "api" },
   ],
   contactButtonsFirstRow: [
