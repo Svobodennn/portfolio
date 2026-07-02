@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, useReducedMotion, Variants } from "framer-motion";
+import { m, useReducedMotion, Variants } from "framer-motion";
 import { useMemo } from "react";
 
 interface BlurFadeTextProps {
@@ -44,46 +44,40 @@ const BlurFadeText = ({
   if (animateByCharacter) {
     return (
       <div className="flex">
-        <AnimatePresence>
-          {characters.map((char, i) => (
-            <motion.span
-              key={i}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={combinedVariants}
-              transition={{
-                delay: delay + i * characterDelay,
-                ease: "easeOut",
-              }}
-              className={cn("inline-block", className)}
-              style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </AnimatePresence>
+        {characters.map((char, i) => (
+          <m.span
+            key={i}
+            initial="hidden"
+            animate="visible"
+            variants={combinedVariants}
+            transition={{
+              delay: delay + i * characterDelay,
+              ease: "easeOut",
+            }}
+            className={cn("inline-block", className)}
+            style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
+          >
+            {char}
+          </m.span>
+        ))}
       </div>
     );
   }
 
   return (
     <div className="flex">
-      <AnimatePresence>
-        <motion.span
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          variants={combinedVariants}
-          transition={{
-            delay,
-            ease: "easeOut",
-          }}
-          className={cn("inline-block", className)}
-        >
-          {text}
-        </motion.span>
-      </AnimatePresence>
+      <m.span
+        initial="hidden"
+        animate="visible"
+        variants={combinedVariants}
+        transition={{
+          delay,
+          ease: "easeOut",
+        }}
+        className={cn("inline-block", className)}
+      >
+        {text}
+      </m.span>
     </div>
   );
 };

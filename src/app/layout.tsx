@@ -1,3 +1,4 @@
+import { MotionProvider } from "@/components/motion-provider";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -71,10 +72,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
+          <MotionProvider>
+            <TooltipProvider delayDuration={0}>
+              {children}
+              <Navbar />
+            </TooltipProvider>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>
