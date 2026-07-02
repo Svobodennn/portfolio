@@ -25,6 +25,7 @@ export interface ResumeText {
     toolCategories: {
       infra: string;
       observability: string;
+      ai: string;
       payments: string;
       dev: string;
       comms: string;
@@ -123,10 +124,11 @@ const en: ResumeText = {
     toolCategories: {
       infra: "Hosting & Infrastructure",
       observability: "Observability",
+      ai: "AI & LLM Providers",
       payments: "Payments",
       dev: "Dev & Security",
       comms: "Comms & PM",
-      api: "Email & APIs",
+      api: "Messaging & Email",
     },
     openToWork: "Open to Work",
     ctaTitle: "Let's build something",
@@ -228,10 +230,11 @@ const tr: ResumeText = {
     toolCategories: {
       infra: "Barındırma & Altyapı",
       observability: "Gözlemlenebilirlik",
+      ai: "AI & LLM Sağlayıcıları",
       payments: "Ödeme",
       dev: "Geliştirme & Güvenlik",
       comms: "İletişim & PM",
-      api: "E-posta & API",
+      api: "Mesajlaşma & E-posta",
     },
     openToWork: "İşe Açık",
     ctaTitle: "Birlikte bir şeyler inşa edelim",
@@ -333,10 +336,11 @@ const pl: ResumeText = {
     toolCategories: {
       infra: "Hosting i infrastruktura",
       observability: "Obserwowalność",
+      ai: "AI i dostawcy LLM",
       payments: "Płatności",
       dev: "Programowanie i bezpieczeństwo",
       comms: "Komunikacja i PM",
-      api: "E-mail i API",
+      api: "Wiadomości i e-mail",
     },
     openToWork: "Otwarty na pracę",
     ctaTitle: "Zbudujmy coś razem",

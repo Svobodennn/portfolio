@@ -211,6 +211,7 @@ export default function Page({ params }: { params: { locale: string } }) {
             [
               { id: "infra", label: data.ui.toolCategories.infra },
               { id: "observability", label: data.ui.toolCategories.observability },
+              { id: "ai", label: data.ui.toolCategories.ai },
               { id: "payments", label: data.ui.toolCategories.payments },
               { id: "dev", label: data.ui.toolCategories.dev },
               { id: "comms", label: data.ui.toolCategories.comms },
