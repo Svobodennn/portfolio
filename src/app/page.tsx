@@ -4,8 +4,10 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
 import { BLUR_FADE_DELAY } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -224,6 +226,37 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
+      </section>
+      <section id="contact" className="w-full py-12">
+        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              Open to Work
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Let&apos;s build something
+            </h2>
+            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-lg">
+              Open to Full-stack and Backend roles — remote, hybrid, or on-site,
+              and open to relocation. Reach out and let&apos;s talk.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+              <a
+                href={`mailto:${DATA.contact.email}`}
+                className={cn(buttonVariants({ variant: "default" }))}
+              >
+                Email me
+              </a>
+              <a
+                href={DATA.resumeUrl}
+                download
+                className={cn(buttonVariants({ variant: "outline" }))}
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
+        </BlurFade>
       </section>
     </main>
   );
