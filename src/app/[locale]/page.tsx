@@ -207,33 +207,53 @@ export default function Page({ params }: { params: { locale: string } }) {
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <h2 className="text-xl font-bold">{data.ui.tools}</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 15}>
-            <div className="flex flex-wrap gap-2">
-              {data.tools.map((tool) => (
-                <div
-                  key={tool.name}
-                  className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1 text-xs font-medium"
-                >
-                  {tool.logo ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={tool.logo}
-                      alt=""
-                      width={16}
-                      height={16}
-                      className={cn("size-4", tool.invert && "dark:invert")}
-                    />
-                  ) : (
-                    <span
-                      className="size-2 rounded-full"
-                      style={{ backgroundColor: tool.color }}
-                    />
-                  )}
-                  {tool.name}
+          {(
+            [
+              { id: "infra", label: data.ui.toolCategories.infra },
+              { id: "observability", label: data.ui.toolCategories.observability },
+              { id: "payments", label: data.ui.toolCategories.payments },
+              { id: "dev", label: data.ui.toolCategories.dev },
+              { id: "comms", label: data.ui.toolCategories.comms },
+              { id: "api", label: data.ui.toolCategories.api },
+            ] as const
+          ).map((cat, catIdx) => {
+            const items = data.tools.filter((tool) => tool.category === cat.id);
+            if (items.length === 0) return null;
+            return (
+              <BlurFade key={cat.id} delay={BLUR_FADE_DELAY * (15 + catIdx)}>
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-xs font-medium text-muted-foreground">
+                    {cat.label}
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((tool) => (
+                      <div
+                        key={tool.name}
+                        className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1 text-xs font-medium"
+                      >
+                        {tool.logo ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={tool.logo}
+                            alt=""
+                            width={16}
+                            height={16}
+                            className={cn("size-4", tool.invert && "dark:invert")}
+                          />
+                        ) : (
+                          <span
+                            className="size-2 rounded-full"
+                            style={{ backgroundColor: tool.color }}
+                          />
+                        )}
+                        {tool.name}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-          </BlurFade>
+              </BlurFade>
+            );
+          })}
         </div>
       </section>
       <section id="work">

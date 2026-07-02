@@ -22,6 +22,14 @@ export interface ResumeText {
     workflowSteps: string[];
     workflowNotes: string[];
     tools: string;
+    toolCategories: {
+      infra: string;
+      observability: string;
+      payments: string;
+      dev: string;
+      comms: string;
+      api: string;
+    };
     openToWork: string;
     ctaTitle: string;
     ctaText: string;
@@ -112,6 +120,14 @@ const en: ResumeText = {
       "A self-improving loop: agent errors are captured, distilled into reusable rules, and tracked on a live dashboard — the system learns from its own mistakes.",
     ],
     tools: "Infrastructure & Tools",
+    toolCategories: {
+      infra: "Hosting & Infrastructure",
+      observability: "Observability",
+      payments: "Payments",
+      dev: "Dev & Security",
+      comms: "Comms & PM",
+      api: "Email & APIs",
+    },
     openToWork: "Open to Work",
     ctaTitle: "Let's build something",
     ctaText:
@@ -209,6 +225,14 @@ const tr: ResumeText = {
       "Kendini geliştiren döngü: ajan hataları yakalanır, tekrar kullanılabilir kurallara dönüştürülür ve canlı bir dashboard'da izlenir — sistem kendi hatalarından öğrenir.",
     ],
     tools: "Altyapı & Araçlar",
+    toolCategories: {
+      infra: "Barındırma & Altyapı",
+      observability: "Gözlemlenebilirlik",
+      payments: "Ödeme",
+      dev: "Geliştirme & Güvenlik",
+      comms: "İletişim & PM",
+      api: "E-posta & API",
+    },
     openToWork: "İşe Açık",
     ctaTitle: "Birlikte bir şeyler inşa edelim",
     ctaText:
@@ -306,6 +330,14 @@ const pl: ResumeText = {
       "Samodoskonaląca się pętla: błędy agentów są wychwytywane, przekształcane w reguły wielokrotnego użytku i śledzone na żywym dashboardzie — system uczy się na własnych błędach.",
     ],
     tools: "Infrastruktura i narzędzia",
+    toolCategories: {
+      infra: "Hosting i infrastruktura",
+      observability: "Obserwowalność",
+      payments: "Płatności",
+      dev: "Programowanie i bezpieczeństwo",
+      comms: "Komunikacja i PM",
+      api: "E-mail i API",
+    },
     openToWork: "Otwarty na pracę",
     ctaTitle: "Zbudujmy coś razem",
     ctaText:
