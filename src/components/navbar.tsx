@@ -79,21 +79,20 @@ export default function Navbar() {
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button
-                aria-label="Download as PDF"
-                onClick={() => {
-                  window.print();
-                }}
+              <a
+                href={DATA.resumeUrl}
+                download
+                aria-label="Download CV"
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
                   "size-12"
                 )}
               >
                 <Download className="size-4" />
-              </button>
+              </a>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Download as PDF</p>
+              <p>Download CV</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>
