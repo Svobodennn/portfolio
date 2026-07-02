@@ -3,9 +3,9 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -35,7 +35,6 @@ export default function Page() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-8">
-      <h1 className="sr-only">{`${DATA.name} — ${DATA.description}`}</h1>
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -45,12 +44,9 @@ export default function Page() {
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-2">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`${DATA.name}`}
-              />
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                {DATA.name}
+              </h1>
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
@@ -80,7 +76,12 @@ export default function Page() {
                 {DATA.contactButtonsSecondRow && DATA.contactButtonsSecondRow.length > 0 && (
                   <div className="flex flex-row flex-wrap items-start gap-1">
                     {DATA.contactButtonsSecondRow?.map((link, idx) => (
-                      <Link href={link?.href} key={idx} target="_blank">
+                      <Link
+                        href={link?.href}
+                        key={idx}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] items-center justify-center">
                           {link.icon}
                           {link.type}
@@ -91,12 +92,16 @@ export default function Page() {
                 )}
               </BlurFade>
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
+            <div className="relative size-28 shrink-0 overflow-hidden rounded-full border">
+              <Image
+                src={DATA.avatarUrl}
+                alt={DATA.name}
+                fill
+                sizes="112px"
+                priority
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
