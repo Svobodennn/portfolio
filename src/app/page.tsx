@@ -5,11 +5,10 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
-
-const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   const personLd = {
