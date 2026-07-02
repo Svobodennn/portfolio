@@ -44,6 +44,24 @@ export async function markdownToHTML(markdown: string) {
   return p.toString();
 }
 
+function parseMetadata(data: Record<string, unknown>, slug: string): Metadata {
+  const required = ["title", "publishedAt", "summary"] as const;
+  const missing = required.filter(
+    (key) => typeof data[key] !== "string" || data[key] === ""
+  );
+  if (missing.length > 0) {
+    throw new Error(
+      `Invalid frontmatter in content/${slug}.mdx — missing or empty: ${missing.join(", ")}`
+    );
+  }
+  return {
+    title: data.title as string,
+    publishedAt: data.publishedAt as string,
+    summary: data.summary as string,
+    image: typeof data.image === "string" ? data.image : undefined,
+  };
+}
+
 export async function getPost(slug: string): Promise<Post | null> {
   const filePath = path.join(CONTENT_DIR, `${slug}.mdx`);
 
@@ -58,7 +76,7 @@ export async function getPost(slug: string): Promise<Post | null> {
 
   return {
     source: content,
-    metadata: data as Metadata,
+    metadata: parseMetadata(data, slug),
     slug,
   };
 }
