@@ -56,6 +56,7 @@ export function ProjectCard({
               src={image}
               alt={title}
               fill
+              sizes="(max-width: 768px) 100vw, 640px"
               className="object-contain" // Flex container handles centering
             />
           </div>
