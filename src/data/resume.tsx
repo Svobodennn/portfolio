@@ -44,12 +44,22 @@ const base = {
   ],
   tools: [
     { name: "Vercel", logo: "/logos/vercel.svg", invert: true, color: "#8b8b8b" },
+    { name: "Hetzner", logo: "/logos/hetzner.svg", invert: false, color: "#D50C2D" },
     { name: "DigitalOcean", logo: "/logos/digitalocean.svg", invert: false, color: "#0080FF" },
-    { name: "Cloudflare", logo: "/logos/cloudflare.svg", invert: false, color: "#F38020" },
+    { name: "Laravel Forge", logo: "", invert: false, color: "#EF5A29" },
     { name: "Dokploy", logo: "", invert: false, color: "#7C3AED" },
+    { name: "Caddy", logo: "/logos/caddy.svg", invert: false, color: "#1F88C0" },
+    { name: "Cloudflare", logo: "/logos/cloudflare.svg", invert: false, color: "#F38020" },
+    { name: "GitHub Actions", logo: "/logos/githubactions.svg", invert: false, color: "#2088FF" },
+    { name: "Postman", logo: "/logos/postman.svg", invert: false, color: "#FF6C37" },
+    { name: "Sentry", logo: "/logos/sentry.svg", invert: false, color: "#362D59" },
     { name: "PostHog", logo: "/logos/posthog.svg", invert: true, color: "#000000" },
     { name: "Grafana", logo: "/logos/grafana.svg", invert: false, color: "#F46800" },
+    { name: "Slack", logo: "", invert: false, color: "#611F69" },
+    { name: "Linear", logo: "/logos/linear.svg", invert: false, color: "#5E6AD2" },
+    { name: "Jira", logo: "/logos/jira.svg", invert: false, color: "#0052CC" },
     { name: "Brevo", logo: "/logos/brevo.svg", invert: false, color: "#0B996E" },
+    { name: "OpenRouter", logo: "/logos/openrouter.svg", invert: false, color: "#94A3B8" },
   ],
   contactButtonsFirstRow: [
     {
