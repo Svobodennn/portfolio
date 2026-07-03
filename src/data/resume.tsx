@@ -73,6 +73,8 @@ const base = {
     { name: "Stripe", logo: "/logos/stripe.svg", invert: false, color: "#635BFF", category: "payments" },
     { name: "iyzico", logo: "", invert: false, color: "#1E64FF", category: "payments" },
     { name: "NOWPayments", logo: "", invert: false, color: "#2081E2", category: "payments" },
+    { name: "PayTR", logo: "", invert: false, color: "#F5821F", category: "payments" },
+    { name: "Centrobill", logo: "", invert: false, color: "#1B75BC", category: "payments" },
     { name: "GitHub Actions", logo: "/logos/githubactions.svg", invert: false, color: "#2088FF", category: "dev" },
     { name: "Postman", logo: "/logos/postman.svg", invert: false, color: "#FF6C37", category: "dev" },
     { name: "Burp Suite", logo: "/logos/burpsuite.svg", invert: false, color: "#FF6633", category: "dev" },
