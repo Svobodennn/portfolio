@@ -45,11 +45,11 @@ export interface ResumeText {
 }
 
 const en: ResumeText = {
-  description: "Backend Developer",
+  description: "Software Engineer — Backend & GenAI",
   seoDescription:
-    "Melih SARAÇ — Backend Developer in Bursa, Turkey. PHP/Laravel & Node.js: REST APIs, payment integrations, PostgreSQL/MySQL, Redis and Docker.",
+    "Melih SARAÇ — Software Engineer (Backend & GenAI) in Bursa, Turkey. Real-time systems, payment integrations and LLM-powered products with TypeScript/Node.js, PHP/Laravel, PostgreSQL and Redis.",
   summaryFirst:
-    "I am an experienced backend developer with solid expertise in ***PHP and Laravel***, along with hands-on experience in ***database management***, ***RESTful API development***, and ***payment systems integration***. I have worked on various projects utilizing technologies like ***PHP***, ***Laravel***, ***NodeJS***. Additionally, I emphasize the use of ***SOLID principles*** and best practices to deliver high-quality, scalable, and secure solutions. I am dedicated to ***teamwork***, ensuring the successful completion of every project.",
+    "I'm a software engineer who ships ***production systems end to end*** — from a ***real-time auction engine*** serving ***thousands of concurrent users*** to ***payment integrations*** across five providers. My current focus is ***applied AI***: ***LLM-based content moderation***, ***AI image & video generation workflows*** and ***multi-agent developer tooling***. I work across ***TypeScript/Node.js***, ***PHP/Laravel*** and ***Python*** with ***PostgreSQL***, ***Redis*** and ***Docker*** — and I optimize for ***measurable outcomes***, like cutting response times by ***~40%*** on a high-traffic platform.",
   summarySecond:
     "In addition to my technical skills, I am passionate about art, dance, sports, music, photography, and motorcycles, all of which fuel my creativity and enhance my problem-solving abilities.",
   work: [
@@ -76,6 +76,7 @@ const en: ResumeText = {
     },
   ],
   education: [
+    { degree: "BSc — Computer Science" },
     { degree: "Erasmus - Computer Science" },
     { degree: "Associate's Degree of Computer Science (ACS) | CGPA 3.53/4.00" },
     { degree: "Bachelor's Degree | Russian Preparatory" },
@@ -84,6 +85,10 @@ const en: ResumeText = {
     {
       description:
         "ArabamSende.com is a ***vehicle auction and valuation platform***. I worked across the full lifecycle, from architecture to production.\n\n- Architected a ***real-time auction engine*** over ***WebSockets*** (Laravel Echo) for live bidding with ***thousands of concurrent users***.\n- Ran the app on ***Laravel Octane + FrankenPHP*** (Caddy) for persistent, high-throughput request handling.\n- Integrated the ***payment system*** and tuned ***PostgreSQL*** and ***Redis*** for auction-time load.",
+    },
+    {
+      description:
+        "A ***web desktop environment*** inspired by PostHog-OS — draggable, resizable windows, a dock, a spotlight launcher and pluggable apps.\n\n- Implemented ***pointer-based drag & resize from scratch*** — zero third-party drag/resize libraries.\n- Modeled window state (z-order, focus, snapping) in ***zustand*** with a clean, testable core.",
     },
     {
       description:
@@ -117,7 +122,7 @@ const en: ResumeText = {
     workflowSteps: ["Plan", "Review", "Multi-agent build", "Automated QA", "Ship"],
     workflowNotes: [
       "A matrix of specialized agents — planning, implementation, code review, security, and verification — coordinated in an automated QA loop.",
-      "Custom token-optimization tooling (RTK proxy) cuts AI-operation cost by 60–90%.",
+      "Token-optimization tooling (RTK proxy) in the loop cuts AI-operation cost by 60–90%.",
       "A self-improving loop: agent errors are captured, distilled into reusable rules, and tracked on a live dashboard — the system learns from its own mistakes.",
     ],
     tools: "Infrastructure & Tools",
@@ -133,7 +138,7 @@ const en: ResumeText = {
     openToWork: "Open to Work",
     ctaTitle: "Let's build something",
     ctaText:
-      "Open to Full-stack and Backend roles — remote, hybrid, or on-site, and open to relocation. Reach out and let's talk.",
+      "Open to Backend, Full-stack and AI Engineering roles — remote, hybrid, or on-site, and open to relocation. Reach out and let's talk.",
     emailMe: "Email me",
     downloadCv: "Download CV",
     home: "Home",
@@ -145,11 +150,11 @@ const en: ResumeText = {
 };
 
 const tr: ResumeText = {
-  description: "Backend Geliştirici",
+  description: "Yazılım Mühendisi — Backend & GenAI",
   seoDescription:
-    "Melih SARAÇ — Bursa, Türkiye'de Backend Geliştirici. PHP/Laravel & Node.js: REST API'ler, ödeme entegrasyonları, PostgreSQL/MySQL, Redis ve Docker.",
+    "Melih SARAÇ — Yazılım Mühendisi (Backend & GenAI), Bursa. Gerçek zamanlı sistemler, ödeme entegrasyonları ve LLM tabanlı ürünler; TypeScript/Node.js, PHP/Laravel, PostgreSQL ve Redis.",
   summaryFirst:
-    "***PHP ve Laravel*** konusunda sağlam bir uzmanlığa sahip, ayrıca ***veritabanı yönetimi***, ***RESTful API geliştirme*** ve ***ödeme sistemleri entegrasyonu*** alanlarında uygulamalı deneyime sahip, deneyimli bir backend geliştiricisiyim. ***PHP***, ***Laravel***, ***NodeJS*** gibi teknolojileri kullanarak çeşitli projelerde çalıştım. Ayrıca, yüksek kaliteli, ölçeklenebilir ve güvenli çözümler sunmak için ***SOLID prensipleri*** ve en iyi uygulamaların kullanımına önem veriyorum. ***Takım çalışmasına*** kendimi adadım ve her projenin başarıyla tamamlanmasını güvence altına alıyorum.",
+    "***Uçtan uca production sistemler*** geliştiren bir yazılım mühendisiyim — ***binlerce eşzamanlı kullanıcıya*** hizmet veren ***gerçek zamanlı bir açık artırma motorundan***, beş farklı sağlayıcıyla ***ödeme entegrasyonlarına*** kadar. Güncel odağım ***uygulamalı AI***: ***LLM tabanlı içerik moderasyonu***, ***AI görsel & video üretim akışları*** ve ***çok-ajanlı geliştirici araçları***. ***TypeScript/Node.js***, ***PHP/Laravel*** ve ***Python*** ile ***PostgreSQL***, ***Redis*** ve ***Docker*** kullanıyorum — ve ***ölçülebilir sonuçlar*** için optimize ediyorum; örneğin yüksek trafikli bir platformda yanıt sürelerini ***~%40*** düşürmek gibi.",
   summarySecond:
     "Teknik becerilerimin yanı sıra; sanata, dansa, spora, müziğe, fotoğrafçılığa ve motosikletlere tutkuyla bağlıyım. Bunların hepsi yaratıcılığımı besliyor ve problem çözme yeteneklerimi geliştiriyor.",
   work: [
@@ -176,6 +181,7 @@ const tr: ResumeText = {
     },
   ],
   education: [
+    { degree: "Lisans — Bilgisayar Bilimi" },
     { degree: "Erasmus - Bilgisayar Bilimi" },
     { degree: "Bilgisayar Bilimleri Ön Lisans Derecesi (ACS) | CGPA 3.53/4.00" },
     { degree: "Lisans Derecesi | Rusça Hazırlık" },
@@ -184,6 +190,10 @@ const tr: ResumeText = {
     {
       description:
         "ArabamSende.com bir ***araç açık artırma ve değerleme platformudur***. Mimariden üretime kadar tüm yaşam döngüsü boyunca çalıştım.\n\n- ***Binlerce eşzamanlı kullanıcıyla*** canlı teklif verme için ***WebSockets*** (Laravel Echo) üzerinde ***gerçek zamanlı bir açık artırma motoru*** tasarladım.\n- Kalıcı ve yüksek verimli istek işleme için uygulamayı ***Laravel Octane + FrankenPHP*** (Caddy) üzerinde çalıştırdım.\n- ***Ödeme sistemini*** entegre ettim ve açık artırma anındaki yük için ***PostgreSQL*** ile ***Redis***'i optimize ettim.",
+    },
+    {
+      description:
+        "PostHog-OS'ten ilham alan bir ***web masaüstü ortamı*** — sürüklenebilir ve boyutlandırılabilir pencereler, dock, spotlight başlatıcı ve takılabilir uygulamalar.\n\n- ***Pointer tabanlı sürükle & boyutlandırmayı sıfırdan*** yazdım — üçüncü parti drag/resize kütüphanesi yok.\n- Pencere durumunu (z-order, odak, yapışma) ***zustand*** ile temiz, test edilebilir bir çekirdekte modelledim.",
     },
     {
       description:
@@ -223,7 +233,7 @@ const tr: ResumeText = {
     ],
     workflowNotes: [
       "Uzmanlaşmış ajan matrisi — planlama, geliştirme, kod incelemesi, güvenlik ve doğrulama — otomatik bir QA döngüsünde koordine edilir.",
-      "Özel token-optimizasyon aracı (RTK proxy) AI-operasyon maliyetini %60–90 düşürür.",
+      "Akışa entegre token-optimizasyon aracı (RTK proxy) AI-operasyon maliyetini %60–90 düşürür.",
       "Kendini geliştiren döngü: ajan hataları yakalanır, tekrar kullanılabilir kurallara dönüştürülür ve canlı bir dashboard'da izlenir — sistem kendi hatalarından öğrenir.",
     ],
     tools: "Altyapı & Araçlar",
@@ -239,7 +249,7 @@ const tr: ResumeText = {
     openToWork: "İşe Açık",
     ctaTitle: "Birlikte bir şeyler inşa edelim",
     ctaText:
-      "Full-stack ve Backend rollerine açığım — uzaktan, hibrit veya ofiste; ayrıca yer değişikliğine de açığım. Bana ulaşın, konuşalım.",
+      "Backend, Full-stack ve AI Engineering rollerine açığım — uzaktan, hibrit veya ofiste; ayrıca yer değişikliğine de açığım. Bana ulaşın, konuşalım.",
     emailMe: "Bana e-posta gönder",
     downloadCv: "CV İndir",
     home: "Ana Sayfa",
@@ -251,11 +261,11 @@ const tr: ResumeText = {
 };
 
 const pl: ResumeText = {
-  description: "Programista Backend",
+  description: "Inżynier Oprogramowania — Backend i GenAI",
   seoDescription:
-    "Melih SARAÇ — Programista Backend w Bursie, Turcja. PHP/Laravel i Node.js: REST API, integracje płatności, PostgreSQL/MySQL, Redis i Docker.",
+    "Melih SARAÇ — Inżynier Oprogramowania (Backend i GenAI), Bursa, Turcja. Systemy czasu rzeczywistego, integracje płatności i produkty oparte na LLM; TypeScript/Node.js, PHP/Laravel, PostgreSQL i Redis.",
   summaryFirst:
-    "Jestem doświadczonym programistą backend z solidną wiedzą w zakresie ***PHP i Laravel***, a także praktycznym doświadczeniem w ***zarządzaniu bazami danych***, ***tworzeniu RESTful API*** oraz ***integracji systemów płatności***. Pracowałem nad różnymi projektami z wykorzystaniem technologii takich jak ***PHP***, ***Laravel***, ***NodeJS***. Ponadto kładę nacisk na stosowanie ***zasad SOLID*** oraz najlepszych praktyk, aby dostarczać wysokiej jakości, skalowalne i bezpieczne rozwiązania. Jestem oddany ***pracy zespołowej***, dbając o pomyślne zakończenie każdego projektu.",
+    "Jestem inżynierem oprogramowania dostarczającym ***systemy produkcyjne od początku do końca*** — od ***silnika aukcyjnego czasu rzeczywistego*** obsługującego ***tysiące jednoczesnych użytkowników*** po ***integracje płatności*** z pięcioma dostawcami. Obecnie skupiam się na ***praktycznym AI***: ***moderacji treści opartej na LLM***, ***generowaniu obrazów i wideo AI*** oraz ***wieloagentowych narzędziach deweloperskich***. Pracuję w ***TypeScript/Node.js***, ***PHP/Laravel*** i ***Pythonie*** z ***PostgreSQL***, ***Redis*** i ***Dockerem*** — i optymalizuję pod ***mierzalne wyniki***, jak skrócenie czasów odpowiedzi o ***~40%*** na platformie o dużym ruchu.",
   summarySecond:
     "Oprócz umiejętności technicznych pasjonuję się sztuką, tańcem, sportem, muzyką, fotografią i motocyklami, co napędza moją kreatywność i wzmacnia zdolność rozwiązywania problemów.",
   work: [
@@ -282,6 +292,7 @@ const pl: ResumeText = {
     },
   ],
   education: [
+    { degree: "Studia I stopnia — Informatyka" },
     { degree: "Erasmus - Informatyka" },
     { degree: "Stopień Associate z informatyki (ACS) | CGPA 3.53/4.00" },
     { degree: "Studia licencjackie | Kurs przygotowawczy z języka rosyjskiego" },
@@ -290,6 +301,10 @@ const pl: ResumeText = {
     {
       description:
         "ArabamSende.com to ***platforma aukcji i wyceny pojazdów***. Pracowałem w pełnym cyklu życia projektu, od architektury po produkcję.\n\n- Zaprojektowałem ***silnik aukcyjny działający w czasie rzeczywistym*** oparty na ***WebSockets*** (Laravel Echo) do licytacji na żywo z ***tysiącami jednoczesnych użytkowników***.\n- Uruchomiłem aplikację na ***Laravel Octane + FrankenPHP*** (Caddy) w celu trwałej obsługi żądań o wysokiej przepustowości.\n- Zintegrowałem ***system płatności*** oraz zoptymalizowałem ***PostgreSQL*** i ***Redis*** pod kątem obciążenia w czasie aukcji.",
+    },
+    {
+      description:
+        "***Pulpit webowy*** inspirowany PostHog-OS — przeciągane i skalowalne okna, dock, wyszukiwarka spotlight i wtykowe aplikacje.\n\n- Zaimplementowałem ***przeciąganie i zmianę rozmiaru od zera*** w oparciu o zdarzenia pointer — zero zewnętrznych bibliotek drag/resize.\n- Stan okien (kolejność z, fokus, przyciąganie) zamodelowałem w ***zustand*** z czystym, testowalnym rdzeniem.",
     },
     {
       description:
@@ -329,7 +344,7 @@ const pl: ResumeText = {
     ],
     workflowNotes: [
       "Macierz wyspecjalizowanych agentów — planowanie, implementacja, przegląd kodu, bezpieczeństwo i weryfikacja — koordynowana w automatycznej pętli QA.",
-      "Własne narzędzie optymalizacji tokenów (proxy RTK) obniża koszt operacji AI o 60–90%.",
+      "Zintegrowane narzędzie optymalizacji tokenów (proxy RTK) obniża koszt operacji AI o 60–90%.",
       "Samodoskonaląca się pętla: błędy agentów są wychwytywane, przekształcane w reguły wielokrotnego użytku i śledzone na żywym dashboardzie — system uczy się na własnych błędach.",
     ],
     tools: "Infrastruktura i narzędzia",
@@ -345,7 +360,7 @@ const pl: ResumeText = {
     openToWork: "Otwarty na pracę",
     ctaTitle: "Zbudujmy coś razem",
     ctaText:
-      "Otwarty na role Full-stack i Backend — zdalne, hybrydowe lub stacjonarne, gotowy do relokacji. Skontaktuj się i porozmawiajmy.",
+      "Otwarty na role Backend, Full-stack i AI Engineering — zdalne, hybrydowe lub stacjonarne, gotowy do relokacji. Skontaktuj się i porozmawiajmy.",
     emailMe: "Napisz do mnie",
     downloadCv: "Pobierz CV",
     home: "Strona główna",
