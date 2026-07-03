@@ -78,7 +78,7 @@ const en: ResumeText = {
   education: [
     { degree: "BSc — Computer Science" },
     { degree: "Erasmus - Computer Science" },
-    { degree: "Associate's Degree of Computer Science (ACS) | CGPA 3.53/4.00" },
+    { degree: "Associate Degree — Computer Programming | CGPA 3.53/4.00" },
     { degree: "Bachelor's Degree | Russian Preparatory" },
   ],
   projects: [
@@ -150,11 +150,11 @@ const en: ResumeText = {
 };
 
 const tr: ResumeText = {
-  description: "Yazılım Mühendisi — Backend & GenAI",
+  description: "Yazılım Geliştirici — Backend & GenAI",
   seoDescription:
-    "Melih SARAÇ — Yazılım Mühendisi (Backend & GenAI), Bursa. Gerçek zamanlı sistemler, ödeme entegrasyonları ve LLM tabanlı ürünler; TypeScript/Node.js, PHP/Laravel, PostgreSQL ve Redis.",
+    "Melih SARAÇ — Yazılım Geliştirici (Backend & GenAI), Bursa. Gerçek zamanlı sistemler, ödeme entegrasyonları ve LLM tabanlı ürünler; TypeScript/Node.js, PHP/Laravel, PostgreSQL ve Redis.",
   summaryFirst:
-    "***Uçtan uca production sistemler*** geliştiren bir yazılım mühendisiyim — ***binlerce eşzamanlı kullanıcıya*** hizmet veren ***gerçek zamanlı bir açık artırma motorundan***, beş farklı sağlayıcıyla ***ödeme entegrasyonlarına*** kadar. Güncel odağım ***uygulamalı AI***: ***LLM tabanlı içerik moderasyonu***, ***AI görsel & video üretim akışları*** ve ***çok-ajanlı geliştirici araçları***. ***TypeScript/Node.js***, ***PHP/Laravel*** ve ***Python*** ile ***PostgreSQL***, ***Redis*** ve ***Docker*** kullanıyorum — ve ***ölçülebilir sonuçlar*** için optimize ediyorum; örneğin yüksek trafikli bir platformda yanıt sürelerini ***~%40*** düşürmek gibi.",
+    "***Uçtan uca production sistemler*** inşa eden bir yazılım geliştiricisiyim — ***binlerce eşzamanlı kullanıcıya*** hizmet veren ***gerçek zamanlı bir açık artırma motorundan***, beş farklı sağlayıcıyla ***ödeme entegrasyonlarına*** kadar. Güncel odağım ***uygulamalı AI***: ***LLM tabanlı içerik moderasyonu***, ***AI görsel & video üretim akışları*** ve ***çok-ajanlı geliştirici araçları***. ***TypeScript/Node.js***, ***PHP/Laravel*** ve ***Python*** ile ***PostgreSQL***, ***Redis*** ve ***Docker*** kullanıyorum — ve ***ölçülebilir sonuçlar*** için optimize ediyorum; örneğin yüksek trafikli bir platformda yanıt sürelerini ***~%40*** düşürmek gibi.",
   summarySecond:
     "Teknik becerilerimin yanı sıra; sanata, dansa, spora, müziğe, fotoğrafçılığa ve motosikletlere tutkuyla bağlıyım. Bunların hepsi yaratıcılığımı besliyor ve problem çözme yeteneklerimi geliştiriyor.",
   work: [
@@ -183,7 +183,7 @@ const tr: ResumeText = {
   education: [
     { degree: "Lisans — Bilgisayar Bilimi" },
     { degree: "Erasmus - Bilgisayar Bilimi" },
-    { degree: "Bilgisayar Bilimleri Ön Lisans Derecesi (ACS) | CGPA 3.53/4.00" },
+    { degree: "Önlisans — Bilgisayar Programcılığı | CGPA 3.53/4.00" },
     { degree: "Lisans Derecesi | Rusça Hazırlık" },
   ],
   projects: [
@@ -261,11 +261,11 @@ const tr: ResumeText = {
 };
 
 const pl: ResumeText = {
-  description: "Inżynier Oprogramowania — Backend i GenAI",
+  description: "Programista — Backend i GenAI",
   seoDescription:
-    "Melih SARAÇ — Inżynier Oprogramowania (Backend i GenAI), Bursa, Turcja. Systemy czasu rzeczywistego, integracje płatności i produkty oparte na LLM; TypeScript/Node.js, PHP/Laravel, PostgreSQL i Redis.",
+    "Melih SARAÇ — Programista (Backend i GenAI), Bursa, Turcja. Systemy czasu rzeczywistego, integracje płatności i produkty oparte na LLM; TypeScript/Node.js, PHP/Laravel, PostgreSQL i Redis.",
   summaryFirst:
-    "Jestem inżynierem oprogramowania dostarczającym ***systemy produkcyjne od początku do końca*** — od ***silnika aukcyjnego czasu rzeczywistego*** obsługującego ***tysiące jednoczesnych użytkowników*** po ***integracje płatności*** z pięcioma dostawcami. Obecnie skupiam się na ***praktycznym AI***: ***moderacji treści opartej na LLM***, ***generowaniu obrazów i wideo AI*** oraz ***wieloagentowych narzędziach deweloperskich***. Pracuję w ***TypeScript/Node.js***, ***PHP/Laravel*** i ***Pythonie*** z ***PostgreSQL***, ***Redis*** i ***Dockerem*** — i optymalizuję pod ***mierzalne wyniki***, jak skrócenie czasów odpowiedzi o ***~40%*** na platformie o dużym ruchu.",
+    "Jestem programistą dostarczającym ***systemy produkcyjne od początku do końca*** — od ***silnika aukcyjnego czasu rzeczywistego*** obsługującego ***tysiące jednoczesnych użytkowników*** po ***integracje płatności*** z pięcioma dostawcami. Obecnie skupiam się na ***praktycznym AI***: ***moderacji treści opartej na LLM***, ***generowaniu obrazów i wideo AI*** oraz ***wieloagentowych narzędziach deweloperskich***. Pracuję w ***TypeScript/Node.js***, ***PHP/Laravel*** i ***Pythonie*** z ***PostgreSQL***, ***Redis*** i ***Dockerem*** — i optymalizuję pod ***mierzalne wyniki***, jak skrócenie czasów odpowiedzi o ***~40%*** na platformie o dużym ruchu.",
   summarySecond:
     "Oprócz umiejętności technicznych pasjonuję się sztuką, tańcem, sportem, muzyką, fotografią i motocyklami, co napędza moją kreatywność i wzmacnia zdolność rozwiązywania problemów.",
   work: [
@@ -294,7 +294,7 @@ const pl: ResumeText = {
   education: [
     { degree: "Studia I stopnia — Informatyka" },
     { degree: "Erasmus - Informatyka" },
-    { degree: "Stopień Associate z informatyki (ACS) | CGPA 3.53/4.00" },
+    { degree: "Associate Degree — Programowanie komputerowe | CGPA 3.53/4.00" },
     { degree: "Studia licencjackie | Kurs przygotowawczy z języka rosyjskiego" },
   ],
   projects: [
