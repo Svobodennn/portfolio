@@ -220,6 +220,29 @@ const base = {
       bgColor: "bg-[#FFCE37]",
     },
     {
+      title: "vibecosystem (fork)",
+      href: "https://github.com/Svobodennn/vibecosystem",
+      dates: "2026 - Present",
+      active: true,
+      technologies: [
+        "Claude Code",
+        "TypeScript",
+        "Agentic AI",
+        "Multi-agent Orchestration",
+        "Hooks & Automation",
+        "Developer Tooling",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/Svobodennn/vibecosystem",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/vibecosystem_og.png",
+      bgColor: "bg-[#0d1117]",
+    },
+    {
       title: "webOS",
       href: "https://github.com/Svobodennn/webos",
       dates: "Jun 2026",

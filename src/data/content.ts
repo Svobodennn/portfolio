@@ -88,6 +88,10 @@ const en: ResumeText = {
     },
     {
       description:
+        "My ***daily-driver fork*** of vibecosystem — an open-source ***AI software team*** for Claude Code (138 agents, 296 skills, 74 hooks) — ***extended substantially*** on top of upstream.\n\n- ***Canavar error-learning system***: agent transcripts are scanned for tool errors, unverified claims and retry storms; mistakes feed a shared ledger so one agent's failure trains the whole team.\n- ***Shared hook library with tests*** and an extended ***agent-monitoring dashboard*** (WebSocket auto-reconnect, stuck-agent detection).\n- ***Worktree handoff protocol*** preventing isolated agents from stranding uncommitted changes.",
+    },
+    {
+      description:
         "A ***web desktop environment*** inspired by PostHog-OS — draggable, resizable windows, a dock, a spotlight launcher and pluggable apps.\n\n- Implemented ***pointer-based drag & resize from scratch*** — zero third-party drag/resize libraries.\n- Modeled window state (z-order, focus, snapping) in ***zustand*** with a clean, testable core.",
     },
     {
@@ -190,6 +194,10 @@ const tr: ResumeText = {
     {
       description:
         "ArabamSende.com bir ***araç açık artırma ve değerleme platformudur***. Mimariden üretime kadar tüm yaşam döngüsü boyunca çalıştım.\n\n- ***Binlerce eşzamanlı kullanıcıyla*** canlı teklif verme için ***WebSockets*** (Laravel Echo) üzerinde ***gerçek zamanlı bir açık artırma motoru*** tasarladım.\n- Kalıcı ve yüksek verimli istek işleme için uygulamayı ***Laravel Octane + FrankenPHP*** (Caddy) üzerinde çalıştırdım.\n- ***Ödeme sistemini*** entegre ettim ve açık artırma anındaki yük için ***PostgreSQL*** ile ***Redis***'i optimize ettim.",
+    },
+    {
+      description:
+        "Claude Code için açık kaynak ***AI yazılım ekibi*** vibecosystem'in ***günlük kullandığım fork'u*** (138 ajan, 296 skill, 74 hook) — upstream üzerine ***ciddi şekilde genişletildi***.\n\n- ***Canavar hata-öğrenme sistemi***: ajan transcript'leri tool hataları, kanıtsız iddialar ve retry fırtınaları için taranır; hatalar ortak ledger'a düşer, bir ajanın hatası tüm ekibi eğitir.\n- ***Testli ortak hook kütüphanesi*** ve genişletilmiş ***ajan izleme dashboard'u*** (WebSocket auto-reconnect, takılı-ajan tespiti).\n- Commit'lenmemiş değişikliklerin kaybolmasını önleyen ***worktree handoff protokolü***.",
     },
     {
       description:
@@ -301,6 +309,10 @@ const pl: ResumeText = {
     {
       description:
         "ArabamSende.com to ***platforma aukcji i wyceny pojazdów***. Pracowałem w pełnym cyklu życia projektu, od architektury po produkcję.\n\n- Zaprojektowałem ***silnik aukcyjny działający w czasie rzeczywistym*** oparty na ***WebSockets*** (Laravel Echo) do licytacji na żywo z ***tysiącami jednoczesnych użytkowników***.\n- Uruchomiłem aplikację na ***Laravel Octane + FrankenPHP*** (Caddy) w celu trwałej obsługi żądań o wysokiej przepustowości.\n- Zintegrowałem ***system płatności*** oraz zoptymalizowałem ***PostgreSQL*** i ***Redis*** pod kątem obciążenia w czasie aukcji.",
+    },
+    {
+      description:
+        "Mój ***codzienny fork*** vibecosystem — otwartoźródłowego ***zespołu programistycznego AI*** dla Claude Code (138 agentów, 296 umiejętności, 74 hooki) — ***znacząco rozszerzony*** względem upstreamu.\n\n- ***System uczenia się na błędach (canavar)***: transkrypty agentów są skanowane pod kątem błędów narzędzi, niezweryfikowanych deklaracji i pętli ponowień; błędy trafiają do wspólnego rejestru — pomyłka jednego agenta uczy cały zespół.\n- ***Współdzielona biblioteka hooków z testami*** i rozbudowany ***dashboard monitoringu agentów*** (auto-reconnect WebSocket, wykrywanie zawieszonych agentów).\n- ***Protokół handoff dla worktree***, zapobiegający utracie niezacommitowanych zmian.",
     },
     {
       description:
