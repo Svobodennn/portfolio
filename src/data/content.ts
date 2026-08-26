@@ -88,11 +88,15 @@ const en: ResumeText = {
     },
     {
       description:
+        "A ***noir browser game that teaches SQL injection*** — and how to defend against it. Built as an ***educational, defensive-security*** experience.\n\n- Runs a ***real SQLite database entirely in the browser*** via ***sql.js*** (WASM) — no backend, every attack executes for real, 100% client-side.\n- Each level is a data-driven ***attack → detection → secure-fix*** loop, with golden tests validating both the vulnerable and the patched queries.\n- ***Next.js*** with a noir design system — a semantic color language and layered SQL-syntax rendering.",
+    },
+    {
+      description:
         "My ***daily-driver fork*** of vibecosystem — an open-source ***AI software team*** for Claude Code (138 agents, 296 skills, 74 hooks) — ***extended substantially*** on top of upstream.\n\n- ***Canavar error-learning system***: agent transcripts are scanned for tool errors, unverified claims and retry storms; mistakes feed a shared ledger so one agent's failure trains the whole team.\n- ***Shared hook library with tests*** and an extended ***agent-monitoring dashboard*** (WebSocket auto-reconnect, stuck-agent detection).\n- ***Worktree handoff protocol*** preventing isolated agents from stranding uncommitted changes.",
     },
     {
       description:
-        "A ***web desktop environment*** inspired by PostHog-OS — draggable, resizable windows, a dock, a spotlight launcher and pluggable apps.\n\n- Implemented ***pointer-based drag & resize from scratch*** — zero third-party drag/resize libraries.\n- Modeled window state (z-order, focus, snapping) in ***zustand*** with a clean, testable core.",
+        "A ***cinematic single-page 'will you go on a date with me?'*** experience — ***zero dependencies, no build***, works offline.\n\n- Hand-built ***custom calendar***, an escaping 'No' button, confetti and a downloadable 'It is a date!' ticket card.\n- ***No backend***: reaching the summary fires an instant ***push + email*** notification (ntfy + Web3Forms) straight from the browser.\n- ***PWA*** (installable, offline shell) with synthesized ***WebAudio*** sound and an accessible, `prefers-reduced-motion`-aware UI.",
     },
     {
       description:
@@ -197,11 +201,15 @@ const tr: ResumeText = {
     },
     {
       description:
+        "***SQL injection'ı ve ona karşı savunmayı öğreten noir bir tarayıcı oyunu*** — ***eğitim amaçlı, savunma odaklı güvenlik*** deneyimi.\n\n- ***Gerçek bir SQLite veritabanını tamamen tarayıcıda*** ***sql.js*** (WASM) ile çalıştırır — backend yok, her saldırı gerçekten yürür, %100 client-side.\n- Her seviye, hem savunmasız hem yamalı sorguları doğrulayan golden test'lerle ***saldırı → tespit → güvenli düzeltme*** döngüsüdür.\n- Noir bir tasarım sistemiyle ***Next.js*** — semantik renk dili ve katmanlı SQL sözdizimi görüntüleme.",
+    },
+    {
+      description:
         "Claude Code için açık kaynak ***AI yazılım ekibi*** vibecosystem'in ***günlük kullandığım fork'u*** (138 ajan, 296 skill, 74 hook) — upstream üzerine ***ciddi şekilde genişletildi***.\n\n- ***Canavar hata-öğrenme sistemi***: ajan transcript'leri tool hataları, kanıtsız iddialar ve retry fırtınaları için taranır; hatalar ortak ledger'a düşer, bir ajanın hatası tüm ekibi eğitir.\n- ***Testli ortak hook kütüphanesi*** ve genişletilmiş ***ajan izleme dashboard'u*** (WebSocket auto-reconnect, takılı-ajan tespiti).\n- Commit'lenmemiş değişikliklerin kaybolmasını önleyen ***worktree handoff protokolü***.",
     },
     {
       description:
-        "PostHog-OS'ten ilham alan bir ***web masaüstü ortamı*** — sürüklenebilir ve boyutlandırılabilir pencereler, dock, spotlight başlatıcı ve takılabilir uygulamalar.\n\n- ***Pointer tabanlı sürükle & boyutlandırmayı sıfırdan*** yazdım — üçüncü parti drag/resize kütüphanesi yok.\n- Pencere durumunu (z-order, odak, yapışma) ***zustand*** ile temiz, test edilebilir bir çekirdekte modelledim.",
+        "***Sinematik, tek sayfalık*** bir 'benimle date'e çıkar mısın?' deneyimi — ***sıfır bağımlılık, build yok***, offline çalışır.\n\n- Elle yazılmış ***özel takvim***, kaçan 'Hayır' butonu, konfeti ve indirilebilir 'It is a date!' bilet kartı.\n- ***Backend yok***: özet ekranına ulaşınca tarayıcıdan doğrudan anında ***push + e-posta*** bildirimi (ntfy + Web3Forms) gider.\n- ***PWA*** (kurulabilir, offline shell), WebAudio ile sentezlenmiş ses ve `prefers-reduced-motion` duyarlı, erişilebilir arayüz.",
     },
     {
       description:
@@ -312,11 +320,15 @@ const pl: ResumeText = {
     },
     {
       description:
+        "***Noir'owa gra przeglądarkowa ucząca SQL injection*** — i obrony przed nim. Zbudowana jako ***edukacyjne doświadczenie z zakresu bezpieczeństwa defensywnego***.\n\n- Uruchamia ***prawdziwą bazę SQLite w całości w przeglądarce*** przez ***sql.js*** (WASM) — bez backendu, każdy atak wykonuje się naprawdę, w 100% po stronie klienta.\n- Każdy poziom to sterowana danymi pętla ***atak → wykrycie → bezpieczna poprawka***, z golden-testami weryfikującymi zarówno podatne, jak i załatane zapytania.\n- ***Next.js*** z noir'owym systemem projektowym — semantyczny język koloru i warstwowe renderowanie składni SQL.",
+    },
+    {
+      description:
         "Mój ***codzienny fork*** vibecosystem — otwartoźródłowego ***zespołu programistycznego AI*** dla Claude Code (138 agentów, 296 umiejętności, 74 hooki) — ***znacząco rozszerzony*** względem upstreamu.\n\n- ***System uczenia się na błędach (canavar)***: transkrypty agentów są skanowane pod kątem błędów narzędzi, niezweryfikowanych deklaracji i pętli ponowień; błędy trafiają do wspólnego rejestru — pomyłka jednego agenta uczy cały zespół.\n- ***Współdzielona biblioteka hooków z testami*** i rozbudowany ***dashboard monitoringu agentów*** (auto-reconnect WebSocket, wykrywanie zawieszonych agentów).\n- ***Protokół handoff dla worktree***, zapobiegający utracie niezacommitowanych zmian.",
     },
     {
       description:
-        "***Pulpit webowy*** inspirowany PostHog-OS — przeciągane i skalowalne okna, dock, wyszukiwarka spotlight i wtykowe aplikacje.\n\n- Zaimplementowałem ***przeciąganie i zmianę rozmiaru od zera*** w oparciu o zdarzenia pointer — zero zewnętrznych bibliotek drag/resize.\n- Stan okien (kolejność z, fokus, przyciąganie) zamodelowałem w ***zustand*** z czystym, testowalnym rdzeniem.",
+        "***Kinowe, jednostronicowe*** doświadczenie „czy pójdziesz ze mną na randkę?” — ***zero zależności, bez builda***, działa offline.\n\n- Ręcznie napisany ***własny kalendarz***, uciekający przycisk „Nie”, konfetti i pobieralna karta-bilet „It is a date!”.\n- ***Bez backendu***: dotarcie do podsumowania wysyła natychmiastowe ***powiadomienie push + e-mail*** (ntfy + Web3Forms) prosto z przeglądarki.\n- ***PWA*** (instalowalne, offline shell), dźwięk syntezowany przez WebAudio i dostępny interfejs zgodny z `prefers-reduced-motion`.",
     },
     {
       description:
