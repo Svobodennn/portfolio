@@ -49,10 +49,17 @@ const en: ResumeText = {
   seoDescription:
     "Melih SARAÇ — Software Engineer (Backend & GenAI) in Bursa, Turkey. Real-time systems, payment integrations and LLM-powered products with TypeScript/Node.js, PHP/Laravel, PostgreSQL and Redis.",
   summaryFirst:
-    "I'm a software engineer who ships ***production systems end to end*** — from a ***real-time auction engine*** serving ***thousands of concurrent users*** to ***payment integrations*** across five providers. My current focus is ***applied AI***: ***LLM-based content moderation***, ***AI image & video generation workflows*** and ***multi-agent developer tooling***. I work across ***TypeScript/Node.js***, ***PHP/Laravel*** and ***Python*** with ***PostgreSQL***, ***Redis*** and ***Docker*** — and I optimize for ***measurable outcomes***, like cutting response times by ***~40%*** on a high-traffic platform.",
+    "I'm a software engineer who ships ***production systems end to end*** — from a ***real-time auction engine*** serving ***thousands of concurrent users*** to ***payment integrations*** across five providers. Since May 2026 I've worked at FameLink on a ***GenAI media platform***: ***GPU image & video generation***, ***LLM chat*** and ***content safety***. On the side I build ***multi-agent developer tooling***. I work across ***TypeScript/Node.js***, ***PHP/Laravel*** and ***Python*** with ***PostgreSQL***, ***Redis*** and ***Docker*** — and I optimize for ***measurable outcomes***, like cutting response times by ***~40%*** on a high-traffic platform.",
   summarySecond:
     "In addition to my technical skills, I am passionate about art, dance, sports, music, photography, and motorcycles, all of which fuel my creativity and enhance my problem-solving abilities.",
   work: [
+    {
+      title: "Software Engineer",
+      location: "Remote",
+      badges: ["Full Time", "Contract"],
+      description:
+        "FameLink is a ***GenAI*** company building ***conversational AI and generative media*** products on a shared ***multi-tenant*** platform.\n\n- Took one brand's web app (***Next.js 16, React 19***) from a UI prototype on mock data to a live product in ***eight weeks*** as its main engineer, wiring up sign-up, real-time chat, AI character creation, image and video generation, and subscriptions.\n- Built ***cost and latency tracking*** for GPU image generation, checked against the provider's own numbers, and ran the ***acceptance tests*** a new image worker had to pass before production.\n- Designed the ***job queue with serverless fallback*** for the planned move to dedicated GPUs.\n- Built the ***renewal relay*** that routes subscription renewals between the brands' payment accounts.\n- Linked every ***credit charge and refund*** to the generation it paid for.\n- Built a daily ***bot-farm detection*** job; every rule ran as a dry run first and has a kill switch and alerts.\n- Initiated ***security reviews*** of login, admin and public endpoints and shipped the fixes.\n- Built the ***Grafana*** and ***PostHog*** dashboards the team uses to track GPU queues, abuse detection, payments, email delivery, revenue and subscriptions.\n- Ran the ***technical SEO*** for a platform migration: canonical host, redirects for old URLs and server-rendered landing pages.\n- Moved ***transactional email*** to a new provider with automatic fallback, spotted deliverability risks early and brought the ***bounce and complaint rates*** down.",
+    },
     {
       title: "Backend Developer",
       location: "Remote",
@@ -76,7 +83,6 @@ const en: ResumeText = {
     },
   ],
   education: [
-    { degree: "BSc — Computer Science" },
     { degree: "Erasmus - Computer Science" },
     { degree: "Associate Degree — Computer Programming | CGPA 3.53/4.00" },
     { degree: "Bachelor's Degree | Russian Preparatory" },
@@ -132,6 +138,7 @@ const en: ResumeText = {
       "A matrix of specialized agents — planning, implementation, code review, security, and verification — coordinated in an automated QA loop.",
       "Token-optimization tooling (RTK proxy) in the loop cuts AI-operation cost by 60–90%.",
       "A self-improving loop: agent errors are captured, distilled into reusable rules, and tracked on a live dashboard — the system learns from its own mistakes.",
+      "Persistent memory in an Obsidian second brain: every session is summarized into a daily note and compiled into a linked knowledge base, and the next session starts with the rules, open threads and knowledge index already loaded. Adapted from a public recipe; the redaction layer that strips credentials before anything is summarized or synced is my own.",
     ],
     tools: "Infrastructure & Tools",
     toolCategories: {
@@ -162,10 +169,17 @@ const tr: ResumeText = {
   seoDescription:
     "Melih SARAÇ — Yazılım Geliştirici (Backend & GenAI), Bursa. Gerçek zamanlı sistemler, ödeme entegrasyonları ve LLM tabanlı ürünler; TypeScript/Node.js, PHP/Laravel, PostgreSQL ve Redis.",
   summaryFirst:
-    "***Uçtan uca production sistemler*** inşa eden bir yazılım geliştiricisiyim — ***binlerce eşzamanlı kullanıcıya*** hizmet veren ***gerçek zamanlı bir açık artırma motorundan***, beş farklı sağlayıcıyla ***ödeme entegrasyonlarına*** kadar. Güncel odağım ***uygulamalı AI***: ***LLM tabanlı içerik moderasyonu***, ***AI görsel & video üretim akışları*** ve ***çok-ajanlı geliştirici araçları***. ***TypeScript/Node.js***, ***PHP/Laravel*** ve ***Python*** ile ***PostgreSQL***, ***Redis*** ve ***Docker*** kullanıyorum — ve ***ölçülebilir sonuçlar*** için optimize ediyorum; örneğin yüksek trafikli bir platformda yanıt sürelerini ***~%40*** düşürmek gibi.",
+    "***Uçtan uca production sistemler*** inşa eden bir yazılım geliştiricisiyim — ***binlerce eşzamanlı kullanıcıya*** hizmet veren ***gerçek zamanlı bir açık artırma motorundan***, beş farklı sağlayıcıyla ***ödeme entegrasyonlarına*** kadar. Mayıs 2026'dan beri FameLink'te bir ***GenAI medya platformu*** üzerinde çalışıyorum: ***GPU ile görsel & video üretimi***, ***LLM sohbet*** ve ***içerik güvenliği***. Bunun yanında ***çok-ajanlı geliştirici araçları*** geliştiriyorum. ***TypeScript/Node.js***, ***PHP/Laravel*** ve ***Python*** ile ***PostgreSQL***, ***Redis*** ve ***Docker*** kullanıyorum — ve ***ölçülebilir sonuçlar*** için optimize ediyorum; örneğin yüksek trafikli bir platformda yanıt sürelerini ***~%40*** düşürmek gibi.",
   summarySecond:
     "Teknik becerilerimin yanı sıra; sanata, dansa, spora, müziğe, fotoğrafçılığa ve motosikletlere tutkuyla bağlıyım. Bunların hepsi yaratıcılığımı besliyor ve problem çözme yeteneklerimi geliştiriyor.",
   work: [
+    {
+      title: "Yazılım Geliştirici",
+      location: "Uzaktan",
+      badges: ["Tam Zamanlı", "Sözleşmeli"],
+      description:
+        "FameLink, ortak ***çok kiracılı (multi-tenant)*** bir platform üzerinde ***konuşma tabanlı AI ve üretken medya*** ürünleri geliştiren bir ***GenAI*** şirketidir.\n\n- Markalardan birinin web uygulamasını (***Next.js 16, React 19***) ana geliştirici olarak, sahte verilerle çalışan bir arayüz prototipinden ***sekiz haftada*** canlı ürüne taşıdım; kayıt ve giriş, gerçek zamanlı sohbet, AI karakter oluşturma, görsel ve video üretimi ve abonelikleri bağladım.\n- GPU ile görsel üretim için ***maliyet ve gecikme takibi*** kurup sağlayıcının kendi verileriyle doğruladım ve yeni bir görsel worker'ının canlıya çıkmadan önce geçmesi gereken ***kabul testlerini*** yürüttüm.\n- Ayrılmış GPU'lara planlanan geçiş için ***serverless yedekli iş kuyruğunu*** tasarladım.\n- Abonelik yenilemelerini markaların ödeme hesapları arasında yönlendiren ***yenileme aktarımını*** kurdum.\n- Her ***kredi tahsilatını ve iadesini*** ait olduğu üretime bağladım.\n- Her kuralı önce dry-run ile devreye alan, kill switch'i ve alarmları olan günlük ***bot çiftliği tespitini*** kurdum.\n- Giriş, admin ve herkese açık endpoint'lerde ***güvenlik incelemelerini*** kendim başlattım ve bulunan sorunları düzelttim.\n- Ekibin GPU kuyruklarını, kötüye kullanım tespitini, ödemeleri, e-posta teslimatını, geliri ve abonelikleri takip ettiği ***Grafana*** ve ***PostHog*** panolarını kurdum.\n- Platform taşımasında ***teknik SEO***'yu yürüttüm: kanonik host, eski adreslerin yönlendirilmesi ve sunucuda render edilen landing sayfaları.\n- ***İşlem e-postalarını*** otomatik yedeği olan yeni bir sağlayıcıya taşıdım; teslim edilebilirlik risklerini önceden tespit edip ***bounce ve şikayet oranlarını*** düşürdüm.",
+    },
     {
       title: "Backend Geliştirici",
       location: "Uzaktan",
@@ -189,7 +203,6 @@ const tr: ResumeText = {
     },
   ],
   education: [
-    { degree: "Lisans — Bilgisayar Bilimi" },
     { degree: "Erasmus - Bilgisayar Bilimi" },
     { degree: "Önlisans — Bilgisayar Programcılığı | CGPA 3.53/4.00" },
     { degree: "Lisans Derecesi | Rusça Hazırlık" },
@@ -251,6 +264,7 @@ const tr: ResumeText = {
       "Uzmanlaşmış ajan matrisi — planlama, geliştirme, kod incelemesi, güvenlik ve doğrulama — otomatik bir QA döngüsünde koordine edilir.",
       "Akışa entegre token-optimizasyon aracı (RTK proxy) AI-operasyon maliyetini %60–90 düşürür.",
       "Kendini geliştiren döngü: ajan hataları yakalanır, tekrar kullanılabilir kurallara dönüştürülür ve canlı bir dashboard'da izlenir — sistem kendi hatalarından öğrenir.",
+      "Obsidian üzerinde kalıcı hafıza: her oturum günlük bir nota özetlenir ve bağlantılı bir bilgi tabanına derlenir; yeni oturum kurallar, açık işler ve bilgi tabanı dizini yüklenmiş olarak başlar. Herkese açık bir tariften uyarladım; kimlik bilgilerini özetleme ve senkronizasyondan önce temizleyen redaksiyon katmanı benim.",
     ],
     tools: "Altyapı & Araçlar",
     toolCategories: {
@@ -281,10 +295,17 @@ const pl: ResumeText = {
   seoDescription:
     "Melih SARAÇ — Programista (Backend i GenAI), Bursa, Turcja. Systemy czasu rzeczywistego, integracje płatności i produkty oparte na LLM; TypeScript/Node.js, PHP/Laravel, PostgreSQL i Redis.",
   summaryFirst:
-    "Jestem programistą dostarczającym ***systemy produkcyjne od początku do końca*** — od ***silnika aukcyjnego czasu rzeczywistego*** obsługującego ***tysiące jednoczesnych użytkowników*** po ***integracje płatności*** z pięcioma dostawcami. Obecnie skupiam się na ***praktycznym AI***: ***moderacji treści opartej na LLM***, ***generowaniu obrazów i wideo AI*** oraz ***wieloagentowych narzędziach deweloperskich***. Pracuję w ***TypeScript/Node.js***, ***PHP/Laravel*** i ***Pythonie*** z ***PostgreSQL***, ***Redis*** i ***Dockerem*** — i optymalizuję pod ***mierzalne wyniki***, jak skrócenie czasów odpowiedzi o ***~40%*** na platformie o dużym ruchu.",
+    "Jestem programistą dostarczającym ***systemy produkcyjne od początku do końca*** — od ***silnika aukcyjnego czasu rzeczywistego*** obsługującego ***tysiące jednoczesnych użytkowników*** po ***integracje płatności*** z pięcioma dostawcami. Od maja 2026 roku pracuję w FameLink nad ***platformą generatywnych mediów (GenAI)***: ***generowanie obrazów i wideo na GPU***, ***czat LLM*** i ***bezpieczeństwo treści***. Poza tym tworzę ***wieloagentowe narzędzia deweloperskie***. Pracuję w ***TypeScript/Node.js***, ***PHP/Laravel*** i ***Pythonie*** z ***PostgreSQL***, ***Redis*** i ***Dockerem*** — i optymalizuję pod ***mierzalne wyniki***, jak skrócenie czasów odpowiedzi o ***~40%*** na platformie o dużym ruchu.",
   summarySecond:
     "Oprócz umiejętności technicznych pasjonuję się sztuką, tańcem, sportem, muzyką, fotografią i motocyklami, co napędza moją kreatywność i wzmacnia zdolność rozwiązywania problemów.",
   work: [
+    {
+      title: "Programista",
+      location: "Zdalnie",
+      badges: ["Pełny etat", "Kontrakt"],
+      description:
+        "FameLink to firma ***GenAI*** tworząca produkty ***konwersacyjnego AI i generatywnych mediów*** na wspólnej platformie ***multi-tenant***.\n\n- Jako główny programista przeprowadziłem aplikację webową jednej z marek (***Next.js 16, React 19***) od prototypu interfejsu na danych testowych do działającego produktu w ***osiem tygodni***, podłączając rejestrację i logowanie, czat w czasie rzeczywistym, tworzenie postaci AI, generowanie obrazów i wideo oraz subskrypcje.\n- Zbudowałem ***śledzenie kosztów i opóźnień*** generowania obrazów na GPU, sprawdzone z danymi samego dostawcy, i przeprowadziłem ***testy akceptacyjne***, które nowy worker musiał przejść przed produkcją.\n- Zaprojektowałem ***kolejkę zadań z fallbackiem na serverless*** pod planowaną migrację na dedykowane GPU.\n- Zbudowałem ***przekaźnik odnowień***, który kieruje odnowienia subskrypcji między kontami płatniczymi marek.\n- Powiązałem każde ***obciążenie i zwrot kredytów*** z generacją, za którą zapłacono,.\n- Zbudowałem codzienne ***wykrywanie farm botów***; każda reguła najpierw działała w trybie dry-run i ma wyłącznik awaryjny oraz alerty.\n- Z własnej inicjatywy przeprowadziłem ***przeglądy bezpieczeństwa*** endpointów logowania, panelu admina i publicznego API oraz wdrożyłem poprawki.\n- Zbudowałem dashboardy w ***Grafanie*** i ***PostHogu***, na których zespół śledzi kolejki GPU, wykrywanie nadużyć, płatności, dostarczanie e-maili, przychody i subskrypcje.\n- Prowadziłem ***techniczne SEO*** podczas migracji platformy: kanoniczny host, przekierowania starych adresów i strony docelowe renderowane po stronie serwera.\n- Przeniosłem ***e-maile transakcyjne*** do nowego dostawcy z automatycznym fallbackiem, wcześnie wykryłem ryzyka dostarczalności i obniżyłem ***współczynniki odbić i skarg***.",
+    },
     {
       title: "Programista Backend",
       location: "Zdalnie",
@@ -308,7 +329,6 @@ const pl: ResumeText = {
     },
   ],
   education: [
-    { degree: "Studia I stopnia — Informatyka" },
     { degree: "Erasmus - Informatyka" },
     { degree: "Associate Degree — Programowanie komputerowe | CGPA 3.53/4.00" },
     { degree: "Studia licencjackie | Kurs przygotowawczy z języka rosyjskiego" },
@@ -370,6 +390,7 @@ const pl: ResumeText = {
       "Macierz wyspecjalizowanych agentów — planowanie, implementacja, przegląd kodu, bezpieczeństwo i weryfikacja — koordynowana w automatycznej pętli QA.",
       "Zintegrowane narzędzie optymalizacji tokenów (proxy RTK) obniża koszt operacji AI o 60–90%.",
       "Samodoskonaląca się pętla: błędy agentów są wychwytywane, przekształcane w reguły wielokrotnego użytku i śledzone na żywym dashboardzie — system uczy się na własnych błędach.",
+      "Trwała pamięć w Obsidianie: każda sesja jest streszczana do dziennej notatki i kompilowana do powiązanej bazy wiedzy, a kolejna sesja startuje z załadowanymi regułami, otwartymi wątkami i indeksem bazy wiedzy. Zaadaptowałem publiczny przepis; warstwa redakcji, która usuwa dane uwierzytelniające przed streszczeniem i synchronizacją, jest moja.",
     ],
     tools: "Infrastruktura i narzędzia",
     toolCategories: {
