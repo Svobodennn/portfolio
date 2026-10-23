@@ -341,7 +341,7 @@ export default function Page({ params }: { params: { locale: string } }) {
           ))}
         </div>
       </section>
-      <section id="contact" className="w-full py-12">
+      <section id="contact" className="w-full py-12 print:hidden">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
